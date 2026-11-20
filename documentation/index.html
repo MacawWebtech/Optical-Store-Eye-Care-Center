@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veyra Optique — Developer &amp; Marketplace Documentation</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <!-- Theme & RTL Direction Initialization (Anti-FOUC) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('stackly-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        if (localStorage.getItem('stackly-rtl') === 'true') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { background-color: #F8FAFC; color: #1E293B; line-height: 1.7; }
+    .doc-sidebar { position: sticky; top: 30px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; max-height: 90vh; overflow-y: auto; }
+    .doc-sidebar a { display: block; padding: 6px 0; color: #64748B; font-size: 0.9rem; text-decoration: none; transition: color 0.2s; }
+    .doc-sidebar a:hover, .doc-sidebar a.active { color: #C2410C; font-weight: 700; }
+    .doc-content { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 48px; }
+    .doc-content h2 { border-bottom: 2px solid #F1F5F9; padding-bottom: 12px; margin-top: 48px; margin-bottom: 20px; color: #0F172A; }
+    .doc-content h3 { margin-top: 28px; margin-bottom: 12px; color: #0F172A; }
+    pre { background: #0F172A; color: #F8FAFC; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.88rem; margin: 16px 0 24px; }
+    code { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; background: #F1F5F9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #C2410C; }
+    pre code { background: transparent; padding: 0; color: inherit; }
+    .badge-demo { display: inline-block; padding: 4px 10px; border-radius: 99px; background: rgba(194, 65, 12,0.12); color: #C2410C; font-weight: 700; font-size: 0.8rem; }
+    .badge-backend { display: inline-block; padding: 4px 10px; border-radius: 99px; background: rgba(194, 65, 12, 0.12); color: #C2410C; font-weight: 700; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Documentation Header -->
+  <header style="background: #0F172A; color: #FFFFFF; padding: 32px 0;">
+    <div class="site-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="../assets/images/logo-white.svg" alt="Veyra" style="height: 36px;" />
+        <span style="background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 99px; font-size: 0.8rem; font-weight: 700;">Template v1.0.0</span>
+      </div>
+      <div>
+        <a href="../pages/index.html" class="btn btn-primary btn-sm">Preview Live Template →</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-container" style="padding-top: 40px; padding-bottom: 80px;">
+    <div style="display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: flex-start;">
+      
+      <!-- Sidebar Navigation -->
+      <nav class="doc-sidebar">
+        <h5 style="margin-bottom: 14px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.08em; color: #C2410C;">Documentation Guide</h5>
+        <a href="#intro">1. Introduction &amp; Features</a>
+        <a href="#structure">2. File &amp; Folder Structure</a>
+        <a href="#pages">3. Page Architecture</a>
+        <a href="#colors">4. Three-Color System</a>
+        <a href="#fonts">5. Two-Font System</a>
+        <a href="#responsive">6. Layout &amp; 30px Spacing</a>
+        <a href="#theming">7. Dark/Light Mode</a>
+        <a href="#rtl">8. Right-to-Left (RTL) Support</a>
+        <a href="#catalog">9. Product Catalog &amp; Filtering</a>
+        <a href="#cart">10. Cart &amp; Wishlist System</a>
+        <a href="#booking">11. Eye Test 7-Step Stepper</a>
+        <a href="#tryon">12. Virtual Try-On AR Setup</a>
+        <a href="#integrations">13. Third-Party Integration Points</a>
+        <a href="#credits">14. Credits &amp; Licenses</a>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="doc-content">
+        <div id="intro">
+          <div class="eyebrow">Template Documentation</div>
+          <h1 style="font-size: 2.4rem; margin-bottom: 14px;">Veyra Optical Store &amp; Eye Care Center</h1>
+          <p style="font-size: 1.1rem; color: #64748B;">
+            A premier modern minimalist HTML5 template combining practical eyewear e-commerce (inspired by <em>Lenskart</em>) with high-end editorial storytelling and healthcare precision (inspired by <em>Warby Parker</em>).
+          </p>
+        </div>
+
+        <h2 id="structure">2. File &amp; Folder Structure</h2>
+        <p>The template is delivered in a modular, commercial-ready organization:</p>
+        <pre><code>optical-store/
+├── assets/
+│   ├── css/
+│   │   ├── style.css           (Core typography, cards, layout, modals)
+│   │   ├── dark-mode.css       (Full midnight dark theme contrast)
+│   │   ├── rtl.css             (Complete right-to-left layout mirroring)
+│   │   └── responsive.css      (30px tablet/desktop padding & mobile drawer)
+│   ├── js/
+│   │   ├── main.js             (Theme, RTL, search, mobile drawer, toasts)
+│   │   ├── products.js         (Catalog dataset, live filtering, quick view)
+│   │   ├── cart.js             (Reactive cart, localStorage, coupon, wishlist)
+│   │   └── booking.js          (7-step appointment booking engine)
+│   ├── images/
+│   │   ├── home/               (Hero visuals, try-on & clinic promos)
+│   │   ├── products/           (Handcrafted optical frames & sunglasses)
+│   │   ├── collections/        (Frame shapes: rectangle, round, aviator, etc.)
+│   │   ├── categories/         (Eyeglasses, sunglasses, contacts, blue-light)
+│   │   ├── about/              (Artisans, optometrists, lens cross-section)
+│   │   ├── store/              (Boutique facades & vector map embed)
+│   │   ├── blog/               (6 optical editorial article thumbnails)
+│   │   └── page-banners/       (High-resolution editorial hero banners)
+├── pages/
+│   ├── index.html              (Home Page 1: Optical Store & Collections)
+│   ├── index-2.html            (Home Page 2: Haute Eye Care Boutique)
+│   ├── about.html              (Our story, opticians, craftsmanship)
+│   ├── products.html           (Complete catalog with live filters)
+│   ├── product-details.html    (Gallery, swatches, lens customizer, specs)
+│   ├── eye-test.html           (7-step interactive exam booking)
+│   ├── store-locator.html      (Interactive store cards & vector map)
+│   ├── lens-guide.html         (Nanocoating guide, quiz, comparison table)
+│   ├── blog.html               (Optical journal with categories & search)
+│   ├── blog-details.html       (Editorial article typography & TOC)
+│   ├── contact.html            (Concierge inquiry form & map)
+│   ├── login.html              (Standalone login with guest checkout)
+│   ├── register.html           (Standalone registration)
+│   ├── forgot-password.html    (Password recovery)
+│   ├── cart.html               (Shopping bag, quantities, coupon VEYRA10)
+│   ├── checkout.html           (Guest checkout flow & payment tabs)
+│   ├── coming-soon.html        (Countdown timer & notify form)
+│   ├── maintenance.html        (Digital lab optimization screen)
+│   └── 404.html                (Out of focus error page)
+├── documentation/
+│   └── index.html              (This complete documentation guide)
+├── sitemap.xml
+├── robots.txt
+└── README.md</code></pre>
+
+        <h2 id="pages">3. Page Architecture</h2>
+        <p>This template intentionally does <strong>not</strong> require an admin or customer dashboard. All authentication flows (login, registration) are standalone UI demonstrations that lead gracefully to guest shopping.</p>
+
+        <h2 id="colors">4. Strict Three-Color System</h2>
+        <p>The visual system strictly adheres to exactly three brand colors defined in CSS variables:</p>
+        <pre><code>:root {
+  --color-black: #111827;       /* Black foundation & typography */
+  --color-white: #FFFFFF;       /* White canvas & contrast surfaces */
+  --color-primary: #C2410C;     /* Sedona Terracotta */
+}</code></pre>
+
+        <h2 id="fonts">5. Strict Two-Font System</h2>
+        <p>Only two Google Fonts are loaded throughout the entire template:</p>
+        <ul>
+          <li><strong>Heading Typography:</strong> <code>'Playfair Display', serif</code> (High-end editorial prestige)</li>
+          <li><strong>Body &amp; UI Typography:</strong> <code>'Plus Jakarta Sans', sans-serif</code> (Clean, modern clinical legibility)</li>
+        </ul>
+
+        <h2 id="responsive">6. Layout, 30px Spacing &amp; Tablet/Mobile Menu Bars</h2>
+        <p>The layout spans 100% full width and maintains <strong>exactly 30px horizontal padding on both left and right sides across ALL devices</strong> (Desktop, Tablet, and Mobile) via <code>.site-container</code>, <code>.site-header-inner</code>, <code>.site-footer-inner</code>, <code>.mobile-menu-bar-inner</code>, and <code>.mobile-bottom-nav-inner</code>:</p>
+        <pre><code>.site-container,
+.site-header-inner,
+.site-footer-inner,
+.mobile-menu-bar-inner,
+.mobile-bottom-nav-inner {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  box-sizing: border-box !important;
+}</code></pre>
+        <p><strong>Tablet &amp; Mobile Dual Menu Bar System:</strong> On screen widths below 1024px, the template introduces two dedicated menu bars:</p>
+        <ul>
+          <li><strong>Header Quick-Links Menu Bar:</strong> A sleek, horizontally scrollable category and page menu bar positioned directly beneath the header with smooth momentum scrolling.</li>
+          <li><strong>Bottom App Menu Bar:</strong> A fixed thumb-friendly bottom bar featuring Home, Catalog, Book Exam, Cart Drawer, and Menu.</li>
+        </ul>
+
+        <h2 id="theming">7. Dark and Light Theme System</h2>
+        <p>
+          The template detects the user's system preference (<code>prefers-color-scheme</code>) upon initial load and stores any manual toggle in <code>localStorage.getItem('stackly-theme')</code>. When dark mode is active, <code>data-theme="dark"</code> is attached to the <code>&lt;html&gt;</code> element, and <code>dark-mode.css</code> seamlessly shifts surfaces to deep midnight tones while strictly preserving the primary brand color (<code>#C2410C</code>) and high accessibility contrast.
+        </p>
+
+        <h2 id="rtl">8. Right-to-Left (RTL) Layout Mirroring</h2>
+        <p>
+          Clicking the <strong>RTL</strong> toggle in the desktop header or mobile drawer sets <code>dir="rtl"</code> on <code>&lt;html&gt;</code> and toggles <code>rtl.css</code>. Layouts mirror horizontally:
+        </p>
+        <ul>
+          <li>Logo floats to the right, shopping actions to the left.</li>
+          <li>Filter sidebars shift to the right of product listings.</li>
+          <li>The slide-in shopping cart drawer slides from the <strong>left</strong> side instead of the right.</li>
+          <li>Toast notifications appear on the bottom-left corner.</li>
+          <li>Directional chevron and arrow icons automatically flip horizontally.</li>
+        </ul>
+
+        <h2 id="catalog">9. Product Catalog &amp; Interactive Filtering</h2>
+        <p>
+          The catalog in <code>products.html</code> is dynamically driven by <code>products.js</code>. Buyers can customize or add new eyewear models by modifying the <code>STACKLY_PRODUCTS</code> array. Real-time client filtering includes:
+        </p>
+        <ul>
+          <li>Full-text search matching name, shape, or description.</li>
+          <li>Shape filter: Rectangle, Round, Square, Aviator, Cat-Eye, Wayfarer, Geometric, Rimless.</li>
+          <li>Lens Type filter: Single Vision, Progressive, Blue-Light, Polarized.</li>
+          <li>Price range slider ($50 to $300).</li>
+          <li>Sort by price, rating, or newest.</li>
+          <li>Grid vs. List view toggle.</li>
+        </ul>
+
+        <h2 id="cart">10. Shopping Cart &amp; Wishlist System</h2>
+        <p>
+          The shopping cart persists in <code>localStorage</code> under <code>stackly-cart-v1</code>. Features include:
+        </p>
+        <ul>
+          <li>Slide-in Cart Drawer accessible on every page.</li>
+          <li>Quantity adjustments (+ / -) and item deletion.</li>
+          <li>Interactive Free Shipping threshold progress bar ($150 goal).</li>
+          <li>Promo code support (e.g. <code>VEYRA10</code> grants a 10% discount).</li>
+          <li>Heart wishlist toggle with reactive counters.</li>
+        </ul>
+
+        <h2 id="booking">11. Eye Test 7-Step Stepper</h2>
+        <p>
+          Located at <code>eye-test.html</code> and orchestrated by <code>booking.js</code>:
+        </p>
+        <ol>
+          <li><strong>Step 1:</strong> Select Examination Type (Comprehensive, Contact Fitting, Retinal Scan, Pediatric).</li>
+          <li><strong>Step 2:</strong> Select Store Location (Downtown, Soho, Uptown).</li>
+          <li><strong>Step 3:</strong> Select Date from interactive 14-day calendar.</li>
+          <li><strong>Step 4:</strong> Select Available Time Slot.</li>
+          <li><strong>Step 5:</strong> Patient Legal Contact Details &amp; Vision Insurance.</li>
+          <li><strong>Step 6:</strong> Review Summary Card.</li>
+          <li><strong>Step 7:</strong> Generated Booking Reference ID (e.g. <code>#STK-84920</code>) with print and calendar export actions.</li>
+        </ol>
+
+        <h2 id="tryon">12. Virtual Try-On AR Simulation</h2>
+        <p>
+          Accessed via any product card or details page. It provides:
+        </p>
+        <ul>
+          <li><strong>Studio Mode:</strong> 3D high-resolution model preview with live PD (Pupillary Distance) measurement guide.</li>
+          <li><strong>Live Webcam AR:</strong> Requests browser camera permissions (<code>navigator.mediaDevices.getUserMedia</code>) to project glasses onto the user's live mirror.</li>
+          <li>Integration markers provided for commercial WebGL/WASM engines (e.g. DeepAR, Banuba, or FittingBox).</li>
+        </ul>
+
+        <h2 id="integrations">13. Third-Party Integration Points</h2>
+        <table class="lens-table" style="margin-top: 16px;">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Front-End State</th>
+              <th>Production Backend Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contact Form</td>
+              <td><span class="badge-demo">Demo JS Validation</span></td>
+              <td><span class="badge-backend">Formspree, Netlify Forms, NodeMailer</span></td>
+            </tr>
+            <tr>
+              <td>Eye Test Scheduling</td>
+              <td><span class="badge-demo">7-Step Front-End Engine</span></td>
+              <td><span class="badge-backend">Acuity, Calendly API, Epic EHR</span></td>
+            </tr>
+            <tr>
+              <td>Cart Payments</td>
+              <td><span class="badge-demo">LocalStorage Flow</span></td>
+              <td><span class="badge-backend">Stripe Elements, PayPal SDK, Apple Pay</span></td>
+            </tr>
+            <tr>
+              <td>Store Maps</td>
+              <td><span class="badge-demo">Vector SVG Canvas</span></td>
+              <td><span class="badge-backend">Google Maps JavaScript API, Mapbox</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="credits">14. Credits &amp; Licenses</h2>
+        <ul>
+          <li><strong>Typography:</strong> Google Fonts (<em>Playfair Display</em> &amp; <em>Plus Jakarta Sans</em>) under SIL Open Font License.</li>
+          <li><strong>Icons:</strong> Bootstrap Icons v1.11.3 under MIT License.</li>
+          <li><strong>Visuals:</strong> Custom scalable vector graphics engineered in-house for Veyra Optique.</li>
+        </ul>
+      </main>
+
+    </div>
+  </div>
+
+  <footer style="background: #0F172A; color: #94A3B8; padding: 24px 0; text-align: center; font-size: 0.85rem;">
+    <div class="site-container">
+      &copy; 2026 Veyra Optique Documentation. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

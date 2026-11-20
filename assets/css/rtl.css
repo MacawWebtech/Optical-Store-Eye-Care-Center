@@ -1,0 +1,155 @@
+/* ===================================================================
+   VEYRA OPTICAL STORE & EYE CARE CENTER
+   RTL (Right-to-Left) Stylesheet - Complete Structural Mirroring
+   Supports Arabic & Hebrew with authentic right-aligned typography & components
+   =================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Header & Navigation Mirroring */
+[dir="rtl"] .header-left {
+  order: 1;
+}
+
+[dir="rtl"] .header-nav {
+  order: 2;
+}
+
+[dir="rtl"] .header-actions {
+  order: 3;
+}
+
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%) translateY(12px);
+  text-align: right;
+}
+
+[dir="rtl"] .nav-item:hover .dropdown-menu {
+  transform: translateX(50%) translateY(0);
+}
+
+[dir="rtl"] .dropdown-link {
+  text-align: right;
+}
+
+[dir="rtl"] .eyebrow::before {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+/* Icons rotation for directional cues */
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-arrow-right {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Product Card Elements */
+[dir="rtl"] .product-badge-wrap {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .product-floating-actions {
+  right: auto;
+  left: 14px;
+  transform: translateX(-10px);
+}
+
+[dir="rtl"] .product-card:hover .product-floating-actions {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .product-meta,
+[dir="rtl"] .product-footer {
+  text-align: right;
+}
+
+/* Cart Drawer Mirroring (Slides from the left in RTL) */
+[dir="rtl"] .cart-drawer {
+  right: auto;
+  left: 0;
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.15);
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .cart-drawer.active {
+  transform: translateX(0);
+}
+
+/* Toast Notifications */
+[dir="rtl"] .toast-container {
+  right: auto;
+  left: 30px;
+}
+
+[dir="rtl"] .toast-msg {
+  border-left: none;
+  border-right: 4px solid var(--color-primary);
+  animation: slideInLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Form inputs */
+[dir="rtl"] select.form-control {
+  background-position: left 16px center;
+  padding-right: 18px;
+  padding-left: 42px;
+}
+
+/* Store Locator Layout (Desktop only 2-column mirror) */
+@media (min-width: 1024px) {
+  [dir="rtl"] .store-locator-layout {
+    grid-template-columns: 1fr 420px;
+  }
+}
+
+[dir="rtl"] .store-list-sidebar {
+  order: 2;
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+[dir="rtl"] .store-map-container {
+  order: 1;
+}
+
+/* Feature Split Sections */
+[dir="rtl"] .feature-split-grid {
+  direction: ltr;
+}
+
+[dir="rtl"] .feature-split-grid > * {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Table Header text */
+[dir="rtl"] .lens-table {
+  text-align: right;
+}
+
+/* Modal close button */
+[dir="rtl"] .modal-close-btn {
+  right: auto;
+  left: 18px;
+}
+
+/* Tablet & Mobile Menu Bars in RTL */
+[dir="rtl"] .mobile-menu-bar-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .mobile-bottom-nav-inner {
+  direction: rtl;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

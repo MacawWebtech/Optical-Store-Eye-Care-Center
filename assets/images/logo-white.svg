@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50">
+  <!-- Optical Glasses Icon in Sedona Terracotta -->
+  <g transform="translate(4, 10)">
+    <circle cx="12" cy="15" r="9" fill="none" stroke="#C2410C" stroke-width="2.5"/>
+    <circle cx="34" cy="15" r="9" fill="none" stroke="#C2410C" stroke-width="2.5"/>
+    <!-- Bridge -->
+    <path d="M21 13 Q23 10 25 13" fill="none" stroke="#C2410C" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Temples -->
+    <path d="M3 15 L0 14" fill="none" stroke="#C2410C" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M43 15 L46 14" fill="none" stroke="#C2410C" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Lens Reflection -->
+    <path d="M8 12 Q14 10 16 16" fill="none" stroke="#C2410C" stroke-width="1.2" opacity="0.4"/>
+    <path d="M30 12 Q36 10 38 16" fill="none" stroke="#C2410C" stroke-width="1.2" opacity="0.4"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="62" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF" letter-spacing="0.5">VEYRA</text>
+  <text x="62" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#C2410C" letter-spacing="2.5">EYEWEAR &amp; OPTICAL</text>
+</svg>

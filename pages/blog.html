@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optical &amp; Eyewear Journal — Veyra Optique</title>
+  <meta name="description" content="Read clinical insights on eye health, 2026 eyewear trends, lens coating technology, and optometrist recommendations.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+    <!-- Theme & RTL Direction Initialization (Anti-FOUC) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('stackly-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        if (localStorage.getItem('stackly-rtl') === 'true') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand-logo">
+          <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" />
+          <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" />
+        </a>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">Home 1: Optical Store</a>
+              <a href="index-2.html" class="dropdown-link">Home 2: Eye Boutique</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item"><a href="eye-test.html" class="nav-link">Eye Test</a></li>
+          <li class="nav-item"><a href="lens-guide.html" class="nav-link">Lens Guide</a></li>
+          <li class="nav-item"><a href="store-locator.html" class="nav-link">Stores</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link active">Editorial</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+        <a href="products.html?view=wishlist" class="action-btn" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="badge-count wishlist-badge-count">2</span></a>
+        <button class="action-btn cart-toggle-btn" aria-label="Cart"><i class="bi bi-bag"></i><span class="badge-count cart-badge-count">1</span></button>
+        <button class="action-btn theme-toggle-btn" aria-label="Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="action-btn rtl-toggle-btn" aria-label="RTL"><span class="rtl-btn-text" style="font-size: 0.75rem; font-weight: 800;">RTL</span></button>
+        <a href="eye-test.html" class="header-cta-btn"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+        <button class="mobile-toggle-btn"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-hero page-hero-blog">
+    <div class="site-container">
+      <div class="eyebrow">Editorial Optique</div>
+      <h1 style="color: #FFF; font-size: clamp(2.2rem, 3.5vw, 3.2rem); margin-bottom: 8px;">The Optical Journal</h1>
+      <p style="color: var(--color-muted-light); max-width: 650px;">
+        Evidence-based eye healthcare, optical design essays, prescription advice, and frame styling guides.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Hero Article -->
+  <section class="section-full section-tight bg-surface">
+    <div class="site-container">
+      <div class="featured-article-card">
+        <img src="../assets/images/blog/blog-1.jpg" alt="Featured Article" style="width: 100%; height: 100%; object-fit: cover; min-height: 380px;" />
+        <div style="padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
+              <span class="product-badge badge-primary">Featured Story</span>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">Trends &amp; Style • 5 Min Read</span>
+            </div>
+            <h2 style="font-size: 1.85rem; margin-bottom: 14px; line-height: 1.25;">
+              <a href="blog-details.html">The 2026 Eyewear Trend Report: Sculptural Acetates &amp; Architectural Metals</a>
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 24px;">
+              Why minimalist geometry, featherweight Japanese titanium, and warm champagne crystal tones are defining modern eyewear. Master Optician Marcus Sterling breaks down the shift toward tactile understatement.
+            </p>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <span style="font-size: 0.85rem; font-weight: 600;">By Marcus Sterling • Master Stylist</span>
+            <a href="blog-details.html" class="btn btn-sm btn-primary">Read Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Catalog & Sidebar -->
+  <section class="section-full">
+    <div class="site-container">
+      <div class="blog-layout">
+        
+        <!-- Articles Grid -->
+        <div>
+          <!-- Filter pills -->
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px;">
+            <button class="btn btn-sm btn-primary">All Articles (6)</button>
+            <button class="btn btn-sm btn-outline">Eye Health</button>
+            <button class="btn btn-sm btn-outline">Eyewear Trends</button>
+            <button class="btn btn-sm btn-outline">Lens Guides</button>
+            <button class="btn btn-sm btn-outline">Clinical Care</button>
+          </div>
+
+          <div class="blog-grid" style="gap: 24px;">
+            <!-- Article 1 -->
+            <article class="blog-card">
+              <div class="blog-media">
+                <img src="../assets/images/blog/blog-2.jpg" alt="Blue Light Article" />
+              </div>
+              <div class="blog-body">
+                <div>
+                  <div class="blog-meta"><span class="blog-cat">Eye Health</span><span>• 4 Min Read</span></div>
+                  <h3 class="blog-title"><a href="blog-details.html">Digital Screen Fatigue: How 420nm Selective Filters Protect Cornea</a></h3>
+                  <p class="blog-excerpt">Clinical review of high-energy visible light, melatonin regulation, and how to prevent visual computer syndrome.</p>
+                </div>
+                <div class="blog-footer"><span>By Dr. Elena Vance</span><a href="blog-details.html">Read →</a></div>
+              </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="blog-card">
+              <div class="blog-media">
+                <img src="../assets/images/blog/blog-3.jpg" alt="Prescription Guide" />
+              </div>
+              <div class="blog-body">
+                <div>
+                  <div class="blog-meta"><span class="blog-cat">Guides</span><span>• 6 Min Read</span></div>
+                  <h3 class="blog-title"><a href="blog-details.html">How to Read Your Optical Prescription: SPH, CYL &amp; Axis Decoded</a></h3>
+                  <p class="blog-excerpt">Learn what each abbreviation on your doctor's slip means, including how to measure pupillary distance accurately.</p>
+                </div>
+                <div class="blog-footer"><span>By Dr. Priya Patel</span><a href="blog-details.html">Read →</a></div>
+              </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="blog-card">
+              <div class="blog-media">
+                <img src="../assets/images/blog/blog-4.jpg" alt="Progressive Lenses" />
+              </div>
+              <div class="blog-body">
+                <div>
+                  <div class="blog-meta"><span class="blog-cat">Lens Technology</span><span>• 5 Min Read</span></div>
+                  <h3 class="blog-title"><a href="blog-details.html">Single Vision vs. Progressive Lenses: Which Is Right for You?</a></h3>
+                  <p class="blog-excerpt">Why modern digital free-form progressives eliminated the swim and sway effect of older bifocal designs.</p>
+                </div>
+                <div class="blog-footer"><span>By Marcus Sterling</span><a href="blog-details.html">Read →</a></div>
+              </div>
+            </article>
+
+            
+          </div>
+
+          <!-- Pagination -->
+          <div style="display: flex; justify-content: center; gap: 8px; margin-top: 40px;">
+            <button class="btn btn-sm btn-primary">1</button>
+            <button class="btn btn-sm btn-outline">2</button>
+            <button class="btn btn-sm btn-outline">Next →</button>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+          <!-- Search box -->
+          <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+            <h5 style="margin-bottom: 12px;">Search Articles</h5>
+            <div style="position: relative;">
+              <input type="text" class="form-control" placeholder="Search topics..." style="padding-right: 36px;" />
+              <i class="bi bi-search" style="position: absolute; right: 12px; top: 12px; color: var(--text-muted);"></i>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+            <h5 style="margin-bottom: 14px;">Categories</h5>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+              <a href="blog.html?cat=clinical" style="display: flex; justify-content: space-between; color: var(--text-main);"><span>Clinical Eye Care</span><strong style="color: var(--color-primary);">12</strong></a>
+              <a href="blog.html?cat=style" style="display: flex; justify-content: space-between; color: var(--text-main);"><span>Eyewear Style &amp; Trends</span><strong style="color: var(--color-primary);">18</strong></a>
+              <a href="blog.html?cat=tech" style="display: flex; justify-content: space-between; color: var(--text-main);"><span>Optical Technology</span><strong style="color: var(--color-primary);">9</strong></a>
+              <a href="blog.html?cat=prescription" style="display: flex; justify-content: space-between; color: var(--text-main);"><span>Prescription Guides</span><strong style="color: var(--color-primary);">7</strong></a>
+            </div>
+          </div>
+
+          <!-- Book Exam Callout -->
+          <div style="background-color: var(--color-black); color: var(--color-white); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+            <i class="bi bi-calendar2-check" style="font-size: 2rem; color: var(--color-primary); margin-bottom: 12px; display: block;"></i>
+            <h4 style="color: #FFF; margin-bottom: 8px;">Due for an Eye Exam?</h4>
+            <p style="font-size: 0.85rem; color: var(--color-muted-light); margin-bottom: 18px;">Book a comprehensive 30-minute exam with Dr. Elena Vance in Soho.</p>
+            <a href="eye-test.html" class="btn btn-sm btn-primary btn-block">Schedule Appointment</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GLOBAL SITE FOOTER
+       ========================================== -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Veyra Optique">
+            <img src="../assets/images/logo-white.svg" alt="Veyra Optique" style="height: 38px;" />
+          </a>
+          <p>
+            Veyra Optique merges modern editorial eyewear design with certified ophthalmological health services. Handcrafted Italian bio-acetate frames &amp; precision digital lenses.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Collections -->
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links-list">
+            <li><a href="products.html?cat=eyeglasses">Prescription Eyeglasses</a></li>
+            <li><a href="products.html?cat=sunglasses">Polarized Sunglasses</a></li>
+            <li><a href="products.html?cat=bluelight">Blue-Light Blocking</a></li>
+            <li><a href="products.html?cat=contacts">Contact Lenses</a></li>
+            <li><a href="products.html?cat=readers">Reading Glasses</a></li>
+            <li><a href="products.html?shape=titanium">Pure Titanium Series</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="footer-col">
+          <h5>Eye Care</h5>
+          <ul class="footer-links-list">
+            <li><a href="eye-test.html">Book Eye Examination</a></li>
+            <li><a href="lens-guide.html">Optical Lens Guide</a></li>
+            <li><a href="eye-test.html#contact-fitting">Contact Lens Fitting</a></li>
+            <li><a href="eye-test.html#retinal-scan">Digital Retinal Scan</a></li>
+            <li><a href="store-locator.html">Store Locator &amp; Hours</a></li>
+            <li><a href="about.html#opticians">Meet Our Optometrists</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support -->
+        <div class="footer-col">
+          <h5>Client Support</h5>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Concierge Assistance</a></li>
+            <li><a href="cart.html">Shopping Cart &amp; Bag</a></li>
+            <li><a href="checkout.html">Checkout Flow</a></li>
+            <li><a href="login.html">Sign In / Register</a></li>
+            <li><a href="coming-soon.html">Upcoming Releases</a></li>
+            <li><a href="404.html">System Error 404</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Hours & Help -->
+        <div class="footer-col">
+          <h5>Atelier Hours</h5>
+          <p style="color: var(--color-muted-light); font-size: 0.9rem; margin-bottom: 12px;">
+            Monday – Saturday: 10am – 8pm<br>
+            Sunday: 11am – 6pm
+          </p>
+          <div style="margin-top: 18px;">
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-primary); font-weight: 700; letter-spacing: 0.05em;">Concierge Optical Line:</span>
+            <div style="font-weight: 700; font-size: 1.1rem; color: #FFFFFF; margin-top: 2px;">+1 (800) 555-EYES</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Veyra Optique &amp; Eye Care Centers Inc. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">FDA Optical Compliance</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal & Cart Drawer & Mobile Nav -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-box" style="max-width: 600px; padding: 36px;">
+      <button class="modal-close-btn search-modal-close"><i class="bi bi-x-lg"></i></button>
+      <h3>Search Eyewear</h3>
+      <form action="products.html" method="GET" style="display: flex; gap: 10px; margin-top: 20px;">
+        <input type="text" name="search" class="form-control" placeholder="Search frames..." required />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h4 style="margin: 0;"><i class="bi bi-bag" style="color: var(--color-primary)"></i> Bag (<span class="cart-badge-count">1</span>)</h4>
+      <button class="action-btn cart-drawer-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+        <span style="color: var(--text-muted);">Estimated Subtotal</span>
+        <span class="drawer-subtotal-val" style="font-size: 1.4rem; font-weight: 800;">$145.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" style="height: 34px;" />
+      <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" style="height: 34px;" />
+      <button class="action-btn mobile-nav-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home 1: Optical Store</a>
+      <a href="index-2.html" class="mobile-nav-link">Home 2: Eye Boutique</a>
+      <a href="products.html" class="mobile-nav-link">Products</a>
+      <a href="eye-test.html" class="mobile-nav-link">Book Eye Test</a>
+      <a href="lens-guide.html" class="mobile-nav-link">Lens Guide</a>
+      <a href="store-locator.html" class="mobile-nav-link">Stores</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="blog.html" class="mobile-nav-link active">Editorial</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-controls-row">
+        <button class="btn btn-outline btn-sm theme-toggle-btn" style="flex: 1;"><i class="bi bi-moon-stars-fill me-1"></i> Theme</button>
+        <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span class="rtl-btn-text">RTL</span></button>
+      </div>
+      <a href="eye-test.html" class="btn btn-primary btn-block"><i class="bi bi-calendar2-check me-1"></i> Book Eye Test</a>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <!-- Tablet & Mobile Bottom App Menu Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Quick Action Menu Bar">
+    <div class="mobile-bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="bottom-nav-item">
+        <i class="bi bi-grid"></i>
+        <span>Catalog</span>
+      </a>
+      <a href="eye-test.html" class="bottom-nav-item bottom-nav-featured" title="Book Eye Exam">
+        <div class="bottom-nav-circle">
+          <i class="bi bi-calendar2-check-fill"></i>
+        </div>
+        <span>Book Exam</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item cart-toggle-btn">
+        <div class="bottom-nav-icon-wrap">
+          <i class="bi bi-bag"></i>
+          <span class="badge-count cart-badge-count">1</span>
+        </div>
+        <span>Cart</span>
+      </a>
+      <button class="bottom-nav-item mobile-toggle-btn" aria-label="More Menu">
+        <i class="bi bi-list"></i>
+        <span>Menu</span>
+      </button>
+    </div>
+  </nav>
+</body>
+</html>

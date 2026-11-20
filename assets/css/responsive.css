@@ -1,0 +1,1631 @@
+/* ===================================================================
+   VEYRA OPTICAL STORE & EYE CARE CENTER
+   Responsive Stylesheet - Mobile First & Strict 30px Desktop/Tablet Padding
+   Breakpoints: Mobile (<640px), Tablet (640px–1023px), Desktop (1024px–1280px), Large (>1280px)
+   =================================================================== */
+
+/* Tablet (640px to 1023px) - Strictly maintains 30px horizontal padding & Single Clean Menu Bar */
+@media (min-width: 640px) and (max-width: 1023px) {
+  :root {
+    --site-horizontal-padding: 30px;
+    --header-height: 76px;
+  }
+
+  .site-container,
+  .site-header-inner,
+  .site-footer-inner {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Tablet Header Menu Bar - Single Row, Perfectly Aligned */
+  .site-header {
+    height: var(--header-height) !important;
+    min-height: var(--header-height) !important;
+    max-height: var(--header-height) !important;
+    background-color: var(--header-bg) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-header-inner {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .header-left {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    height: 100% !important;
+  }
+
+  .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+  }
+
+  .brand-logo img,
+  .brand-logo svg {
+    height: 38px !important;
+    width: auto !important;
+    display: block !important;
+  }
+
+  .header-nav {
+    display: none !important;
+  }
+
+  .header-cta-btn {
+    display: none !important;
+  }
+
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    height: 100% !important;
+  }
+
+  .action-btn,
+  .mobile-toggle-btn {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: var(--radius-full) !important;
+    background-color: transparent !important;
+    color: var(--text-main) !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 1.25rem !important;
+    line-height: 1 !important;
+    transition: all var(--transition-fast) !important;
+    flex-shrink: 0 !important;
+    position: relative !important;
+  }
+
+  .action-btn i,
+  .mobile-toggle-btn i {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    font-size: 1.25rem !important;
+  }
+
+  .mobile-toggle-btn i {
+    font-size: 1.4rem !important;
+  }
+
+  .action-btn:hover,
+  .mobile-toggle-btn:hover {
+    background-color: var(--color-primary-light) !important;
+    color: var(--color-primary) !important;
+  }
+
+  .badge-count {
+    position: absolute !important;
+    top: 3px !important;
+    right: 3px !important;
+    width: 17px !important;
+    height: 17px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.65rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    pointer-events: none !important;
+  }
+
+  .rtl-btn-text {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+  }
+
+  /* Completely remove the second-row pill bar in Tablet View */
+  .mobile-menu-bar {
+    display: none !important;
+  }
+
+  /* Remove mobile bottom app bar on Tablet - Keep sleek screen like Desktop */
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  .product-grid,
+  .product-grid.cols-3,
+  .product-grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hero-editorial,
+  .hero-boutique {
+    padding: 60px 0;
+    min-height: auto;
+  }
+
+  .discovery-quiz-card {
+    padding: 44px 28px;
+  }
+
+  .discovery-step-card {
+    padding: 18px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .shapes-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hero-grid,
+  .hero-boutique-grid,
+  .feature-split-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .store-locator-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .tryon-modal-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsive Layout Grids on Tablet */
+  .catalog-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .cart-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .checkout-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .featured-article-card {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .grid-4-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .form-row-3 {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .calendar-days-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+
+  .detail-specs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Desktop (1024px to 1280px) - Strictly maintains 30px horizontal padding */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  :root {
+    --site-horizontal-padding: 30px;
+  }
+
+  .site-container,
+  .site-header-inner,
+  .site-footer-inner {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .mobile-menu-bar {
+    display: none !important;
+  }
+
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+
+  /* Compact Navbar spacing for 1024px to 1280px desktops */
+  .nav-list {
+    gap: 12px !important;
+  }
+
+  .nav-link {
+    font-size: 0.88rem !important;
+  }
+
+  .header-actions {
+    gap: 8px !important;
+  }
+
+  .action-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .header-cta-btn {
+    padding: 8px 14px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+/* Medium-Large Desktop (1281px to 1400px) */
+@media (min-width: 1281px) and (max-width: 1400px) {
+  .nav-list {
+    gap: 16px !important;
+  }
+
+  .nav-link {
+    font-size: 0.9rem !important;
+  }
+
+  .header-actions {
+    gap: 10px !important;
+  }
+}
+
+/* Large Desktop (>1280px) - Strictly maintains 30px horizontal padding */
+@media (min-width: 1281px) {
+  :root {
+    --site-horizontal-padding: 30px;
+  }
+
+  .site-container,
+  .site-header-inner,
+  .site-footer-inner {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .mobile-menu-bar {
+    display: none !important;
+  }
+
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Mobile Screens (Below 640px) - Full Width with Strict 30px Left & Right Padding */
+@media (max-width: 639px) {
+  :root {
+    --site-horizontal-padding: 30px;
+    --header-height: 70px;
+  }
+
+  .site-container,
+  .site-header-inner,
+  .site-footer-inner,
+  .mobile-bottom-nav-inner {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Header adjustments */
+  .site-header {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .site-header-inner {
+    height: 70px !important;
+  }
+
+  /* Display Menu Bar & Bottom App Bar on Mobile */
+  .mobile-menu-bar {
+    display: block !important;
+    background-color: var(--header-bg) !important;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mobile-menu-bar-inner {
+    display: inline-flex !important;
+    width: max-content !important;
+    min-width: 100% !important;
+    max-width: none !important;
+    padding: 8px 30px !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-bottom-nav {
+    display: block !important;
+  }
+
+  body {
+    padding-bottom: 74px;
+  }
+
+  .section-full {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  /* Header adjustments */
+  .header-nav {
+    display: none;
+  }
+
+  .header-cta-btn {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: inline-flex;
+  }
+
+  /* Grid layouts collapse to single or dual columns */
+  .product-grid,
+  .product-grid.cols-3,
+  .product-grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .discovery-quiz-card {
+    padding: 36px 18px;
+  }
+
+  .discovery-step-card {
+    padding: 16px;
+  }
+
+  .product-card .product-media {
+    padding: 14px;
+  }
+
+  .product-body {
+    padding: 14px;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .shapes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Hero collapsing */
+  .hero-editorial,
+  .hero-boutique {
+    padding: 40px 0;
+    min-height: auto;
+  }
+
+  .hero-grid,
+  .hero-boutique-grid,
+  .feature-split-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stat-item h4 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item p {
+    font-size: 0.75rem;
+  }
+
+  /* Booking stepper mobile layout */
+  .booking-workflow-wrapper {
+    padding: 20px 16px;
+  }
+
+  .booking-progress-header {
+    overflow-x: auto;
+    padding-bottom: 12px;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .booking-option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .time-slot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Store locator */
+  .store-locator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .store-map-container {
+    min-height: 320px;
+  }
+
+  /* Try-on modal */
+  .tryon-modal-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tryon-viewport {
+    height: 320px;
+  }
+
+  /* Footer on mobile */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-newsletter-form {
+    flex-direction: column;
+  }
+
+  /* Responsive Layout Grids on Mobile (<640px) */
+  .catalog-layout,
+  .product-detail-layout,
+  .cart-layout,
+  .checkout-layout,
+  .contact-layout,
+  .blog-layout,
+  .featured-article-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .grid-2-col,
+  .grid-3-col,
+  .grid-4-col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-row-2,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .calendar-days-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .detail-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* Extra small mobile (<400px) - Strict 30px Side Padding Maintained */
+@media (max-width: 399px) {
+  :root {
+    --site-horizontal-padding: 30px;
+  }
+
+  .site-container,
+  .site-header-inner,
+  .site-footer-inner,
+  .mobile-menu-bar-inner,
+  .mobile-bottom-nav-inner {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .product-grid,
+  .product-grid.cols-3,
+  .product-grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .time-slot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-days-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .form-row-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Off-Canvas Menu Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  max-width: 85vw;
+  height: 100vh;
+  background-color: var(--bg-card);
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.2);
+  z-index: 2100;
+  transform: translateX(-100%);
+  transition: transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+[dir="rtl"] .mobile-nav-drawer {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+  box-shadow: -4px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav-drawer.active {
+  transform: translateX(0);
+}
+
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2050;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+}
+
+.mobile-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 24px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--color-primary);
+}
+
+.mobile-nav-footer {
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ===================================================================
+   RESPONSIVE ALIGNMENT REFINEMENTS
+   Header, navigation, content grids, and touch navigation alignment.
+   These overrides are intentionally scoped to tablet and mobile only.
+   =================================================================== */
+
+/* Tablet header and compact tablet-landscape widths */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .site-header .mobile-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .site-header .header-actions {
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+  }
+
+  .site-header .header-left,
+  .site-header .brand-logo,
+  .site-header .header-actions {
+    align-self: stretch !important;
+  }
+
+  .site-header .header-left,
+  .site-header .header-actions {
+    align-items: center !important;
+  }
+
+  .site-header .brand-logo img,
+  .site-header .brand-logo svg {
+    height: 38px !important;
+    width: auto !important;
+  }
+
+  .site-container,
+  .site-footer-inner {
+    min-width: 0 !important;
+  }
+
+  .site-container > *,
+  .grid-2-col > *,
+  .grid-3-col > *,
+  .grid-4-col > *,
+  .product-grid > *,
+  .category-grid > *,
+  .blog-grid > * {
+    min-width: 0;
+  }
+
+  .product-grid.list-view .product-card {
+    height: auto;
+    min-height: 220px;
+  }
+
+  .product-grid.list-view .product-media {
+    width: min(34%, 240px);
+    flex: 0 0 min(34%, 240px);
+  }
+}
+
+/* Tablet landscape widths: keep the header from compressing the nav links. */
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .site-header .header-nav,
+  .site-header .header-cta-btn {
+    display: none !important;
+  }
+
+  .site-header .mobile-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .site-header .header-actions {
+    gap: 8px !important;
+    justify-content: flex-end !important;
+  }
+
+  .mobile-menu-bar,
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Mobile header: preserve the logo, keep controls evenly spaced, and avoid overflow. */
+@media (max-width: 639px) {
+  .site-header {
+    height: 70px !important;
+    min-height: 70px !important;
+    max-height: 70px !important;
+  }
+
+  .site-header-inner {
+    height: 70px !important;
+    min-height: 70px !important;
+    padding-left: clamp(16px, 5vw, 20px) !important;
+    padding-right: clamp(16px, 5vw, 20px) !important;
+    gap: 8px !important;
+    justify-content: space-between !important;
+  }
+
+  .site-header .header-left {
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+  }
+
+  .site-header .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    max-width: 48vw !important;
+  }
+
+  .site-header .brand-logo img,
+  .site-header .brand-logo svg {
+    display: block !important;
+    width: auto !important;
+    height: 32px !important;
+    max-width: 48vw !important;
+  }
+
+  .site-header .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 0 0 auto !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    height: 100% !important;
+  }
+
+  .site-header .header-actions .action-btn,
+  .site-header .header-actions .mobile-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 36px !important;
+    width: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+  }
+
+  .site-header .header-actions .action-btn i,
+  .site-header .header-actions .mobile-toggle-btn i {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+  }
+
+  .site-header .header-nav,
+  .site-header .header-cta-btn {
+    display: none !important;
+  }
+
+  /* Theme and direction controls remain available in the mobile drawer. */
+  body:has(.mobile-nav-drawer) .site-header .theme-toggle-btn,
+  body:has(.mobile-nav-drawer) .site-header .rtl-toggle-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-bar-inner {
+    align-items: center !important;
+    gap: 8px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .mobile-menu-item {
+    min-height: 36px;
+    padding: 8px 14px;
+    line-height: 1.15;
+  }
+
+  /* Equal-width bottom navigation items keep labels centered on narrow screens. */
+  .mobile-bottom-nav {
+    height: 66px !important;
+  }
+
+  .mobile-bottom-nav-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    height: 100% !important;
+    padding: 4px clamp(10px, 3.5vw, 16px) !important;
+  }
+
+  .mobile-bottom-nav .bottom-nav-item {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 4px 2px !important;
+    gap: 3px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  .mobile-bottom-nav .bottom-nav-item span {
+    display: block;
+    max-width: 100%;
+    font-size: 0.64rem;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .mobile-bottom-nav .bottom-nav-item i {
+    font-size: 1.18rem;
+  }
+
+  .mobile-bottom-nav .bottom-nav-item.bottom-nav-featured {
+    top: -8px;
+  }
+
+  .mobile-bottom-nav .bottom-nav-circle {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1px;
+  }
+
+  body {
+    padding-bottom: 78px !important;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-header.flex-between {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .site-container > *,
+  .grid-2-col > *,
+  .grid-3-col > *,
+  .grid-4-col > *,
+  .product-grid > *,
+  .category-grid > *,
+  .blog-grid > *,
+  .catalog-layout > *,
+  .product-detail-layout > *,
+  .cart-layout > *,
+  .checkout-layout > *,
+  .contact-layout > *,
+  .blog-layout > * {
+    min-width: 0;
+  }
+
+  .product-grid.list-view .product-card {
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .product-grid.list-view .product-media {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-content,
+  .hero-visual,
+  .feature-split-grid > *,
+  .hero-grid > *,
+  .hero-boutique-grid > * {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hero-cta-group {
+    align-items: stretch;
+  }
+
+  .hero-cta-group .btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .booking-nav-buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .booking-nav-buttons .btn {
+    flex: 1 1 140px;
+  }
+
+  .mobile-nav-drawer {
+    width: min(320px, 88vw);
+    max-width: 88vw;
+    padding: 20px;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 86px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .toast-msg {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Very narrow phones: keep the complete header on one line. */
+@media (max-width: 359px) {
+  .site-header .brand-logo img,
+  .site-header .brand-logo svg {
+    height: 28px !important;
+    max-width: 44vw !important;
+  }
+
+  .site-header .header-actions .action-btn,
+  .site-header .header-actions .mobile-toggle-btn {
+    flex-basis: 35px !important;
+    width: 35px !important;
+    min-width: 35px !important;
+    max-width: 35px !important;
+    height: 35px !important;
+    min-height: 35px !important;
+    max-height: 35px !important;
+  }
+
+  .mobile-bottom-nav-inner {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .mobile-bottom-nav .bottom-nav-item span {
+    font-size: 0.6rem;
+  }
+}
+
+/* Pages without an off-canvas drawer keep their horizontal links on tablet. */
+@media (min-width: 640px) and (max-width: 1100px) {
+  body:not(:has(.mobile-nav-drawer)) .mobile-menu-bar {
+    display: block !important;
+  }
+
+  body:not(:has(.mobile-nav-drawer)) .mobile-menu-bar-inner {
+    gap: 8px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* ===================================================================
+   MOBILE NAVIGATION + SINGLE-COLUMN CARD ALIGNMENT
+   Scoped to phones only; leaves tablet and desktop layouts unchanged.
+   =================================================================== */
+@media (max-width: 639px) {
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1200 !important;
+    overflow: visible !important;
+  }
+
+  .site-header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 8px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .site-header .header-left {
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .site-header .brand-logo,
+  .site-header .brand-logo img,
+  .site-header .brand-logo svg {
+    width: auto !important;
+    max-width: 142px !important;
+    height: 30px !important;
+    display: block !important;
+  }
+
+  .site-header .header-actions {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 2px !important;
+    margin-left: auto !important;
+  }
+
+  .site-header .header-actions .action-btn,
+  .site-header .header-actions .mobile-toggle-btn {
+    flex: 0 0 34px !important;
+    width: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+  }
+
+  .site-header .header-actions .theme-toggle-btn,
+  .site-header .header-actions .rtl-toggle-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-bar {
+    position: relative !important;
+    z-index: 1199 !important;
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    background: var(--header-bg, #fff) !important;
+    border-top: 1px solid var(--border-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    isolation: isolate !important;
+  }
+
+  .mobile-menu-bar-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    padding: 8px 14px !important;
+    gap: 8px !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .mobile-menu-bar-inner::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .mobile-menu-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    min-height: 38px !important;
+    padding: 8px 14px !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Stack paired image/text cards vertically on phone screens. */
+  .product-grid,
+  .product-grid.cols-2,
+  .product-grid.cols-3,
+  .product-grid.cols-4,
+  .grid-2-col,
+  .grid-3-col,
+  .grid-4-col,
+  .category-grid,
+  .blog-grid,
+  .shapes-grid,
+  .feature-split-grid,
+  .hero-grid,
+  .hero-boutique-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .product-grid > *,
+  .grid-2-col > *,
+  .grid-3-col > *,
+  .grid-4-col > *,
+  .category-grid > *,
+  .blog-grid > *,
+  .shapes-grid > * {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* ===================================================================
+   FINAL NAVBAR FIX - MOBILE (<640px) + TABLET (640px-1100px)
+   Single-row header, hamburger -> off-canvas menu is the only page menu.
+   The old horizontal page-pill bar is removed. Keep this block LAST.
+   =================================================================== */
+
+/* Logo: only one version at a time (earlier rules forced both visible) */
+html body .brand-logo .logo-dark-mode { display: none !important; }
+html body .brand-logo .logo-light-mode { display: block !important; }
+html[data-theme="dark"] body .brand-logo .logo-light-mode,
+[data-theme="dark"] body .brand-logo .logo-light-mode { display: none !important; }
+html[data-theme="dark"] body .brand-logo .logo-dark-mode,
+[data-theme="dark"] body .brand-logo .logo-dark-mode { display: block !important; }
+
+/* The page-link pill row is never shown (links live in the menu drawer) */
+.mobile-menu-bar { display: none !important; }
+
+@media (max-width: 1100px) {
+  html body .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1200 !important;
+    display: block !important;
+    height: var(--nav-h) !important;
+    min-height: var(--nav-h) !important;
+    max-height: var(--nav-h) !important;
+    overflow: visible !important;
+    background-color: var(--header-bg) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
+
+  html body .site-header .site-header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    height: var(--nav-h) !important;
+    min-height: var(--nav-h) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: var(--nav-pad) !important;
+    padding-right: var(--nav-pad) !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .site-header .header-left {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 1 auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+  }
+
+  html body .site-header .brand-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  html body .site-header .brand-logo img {
+    height: var(--nav-logo-h) !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  html body .site-header .header-nav,
+  html body .site-header .header-cta-btn { display: none !important; }
+
+  html body .site-header .header-actions {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: var(--nav-gap) !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+
+  html body .site-header .header-actions .action-btn,
+  html body .site-header .header-actions .mobile-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 var(--nav-btn) !important;
+    width: var(--nav-btn) !important;
+    min-width: var(--nav-btn) !important;
+    max-width: var(--nav-btn) !important;
+    height: var(--nav-btn) !important;
+    min-height: var(--nav-btn) !important;
+    max-height: var(--nav-btn) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+  }
+
+  /* Burger always sits last, aligned to the same edge padding as the logo */
+  html body .site-header .header-actions .mobile-toggle-btn { order: 99; }
+
+  /* Pages that have no drawer must not show a dead hamburger */
+  body:not(:has(.mobile-nav-drawer)) .site-header .mobile-toggle-btn { display: none !important; }
+
+  /* Drawer is full height and scrolls safely on short screens */
+  .mobile-nav-drawer {
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+  .mobile-nav-links { min-height: 0; padding-right: 4px; }
+  .mobile-nav-footer { flex-shrink: 0; }
+}
+
+/* Tablet 640px - 1100px */
+@media (min-width: 640px) and (max-width: 1100px) {
+  :root {
+    --nav-h: 76px;
+    --nav-pad: 30px;
+    --nav-logo-h: 38px;
+    --nav-gap: 10px;
+    --nav-btn: 42px;
+  }
+  .mobile-bottom-nav { display: none !important; }
+  html body { padding-bottom: 0 !important; }
+  .mobile-nav-drawer { width: 340px; max-width: 70vw; }
+}
+
+/* Mobile < 640px */
+@media (max-width: 639px) {
+  :root {
+    --nav-h: 64px;
+    --nav-pad: 30px;
+    --nav-logo-h: 30px;
+    --nav-gap: 2px;
+    --nav-btn: 38px;
+  }
+  /* Theme / RTL live in the drawer on phones */
+  html body .site-header .header-actions .theme-toggle-btn,
+  html body .site-header .header-actions .rtl-toggle-btn { display: none !important; }
+  html body .site-header .brand-logo img { max-width: 150px !important; }
+  .mobile-nav-drawer { width: min(320px, 86vw); max-width: 86vw; }
+}
+
+@media (max-width: 359px) {
+  :root { --nav-pad: 16px; --nav-logo-h: 26px; --nav-btn: 34px; }
+}
+
+/* Mobile: remove bottom app bar - only the top navbar remains */
+@media (max-width: 639px) {
+  html body .mobile-bottom-nav { display: none !important; }
+  html body { padding-bottom: 0 !important; }
+  .toast-container { bottom: 16px !important; }
+}
+
+/* ===================================================================
+   TABLET + MOBILE: readable black paragraph text, tighter footer
+   (light theme only; :where() keeps specificity at 0 so paragraphs that
+   already have their own colour - dark footer, dark banners, buttons -
+   are left alone)
+   =================================================================== */
+@media (max-width: 1023px) {
+  :where(html:not([data-theme="dark"])) p {
+    color: var(--color-black);
+  }
+  /* paragraphs that set the muted colour inline */
+  html:not([data-theme="dark"]) p[style*="--text-muted"] {
+    color: var(--color-black) !important;
+  }
+  /* paragraph classes that carry their own grey */
+  html:not([data-theme="dark"]) p.blog-excerpt,
+  html:not([data-theme="dark"]) p.hero-lead,
+  html:not([data-theme="dark"]) .stat-item p {
+    color: var(--color-black);
+  }
+}
+
+/* Tablet footer: remove the extra vertical space */
+@media (min-width: 640px) and (max-width: 1023px) {
+  html body .site-footer {
+    padding-top: 44px;
+    padding-bottom: 24px;
+  }
+  html body .footer-top {
+    gap: 28px 36px;
+    margin-bottom: 28px;
+  }
+  html body .footer-brand p {
+    max-width: none;
+    margin: 12px 0 16px;
+  }
+  html body .footer-col h5 {
+    margin-bottom: 12px;
+  }
+  html body .footer-links-list {
+    gap: 8px;
+  }
+  html body .footer-bottom {
+    padding-top: 20px;
+    gap: 10px 20px;
+  }
+}
+
+/* ===================================================================
+   FOOTER ALIGNMENT - TABLET + MOBILE (all pages share this footer)
+   =================================================================== */
+@media (max-width: 1023px) {
+  /* bottom bar: copyright centered, legal links in one tidy wrapped row */
+  html body .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+  html body .footer-bottom > div {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  }
+  html body .footer-bottom > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px 22px !important;
+  }
+  html body .footer-bottom a {
+    white-space: nowrap;   /* never break "Terms of Service" over lines */
+  }
+}
+
+@media (max-width: 639px) {
+  html body .site-footer {
+    padding-top: 44px;
+    padding-bottom: 24px;
+  }
+  html body .footer-top {
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+  html body .footer-brand p {
+    max-width: none;
+    margin: 12px 0 16px;
+  }
+  html body .footer-col h5 {
+    margin-bottom: 12px;
+  }
+  html body .footer-links-list {
+    gap: 10px;
+  }
+  html body .footer-bottom {
+    padding-top: 20px;
+  }
+}
+
+/* Theme & RTL: in the top nav bar on tablet only; on mobile they live inside the menu drawer */
+@media (min-width: 640px) and (max-width: 1100px) {
+  html body .site-header .header-actions .theme-toggle-btn,
+  html body .site-header .header-actions .rtl-toggle-btn {
+    display: inline-flex !important;
+  }
+
+  .mobile-nav-footer .mobile-controls-row {
+    display: none;
+  }
+}
+
+/* Lens quiz result: keep the button inside the viewport on small phones */
+@media (max-width: 639px) {
+  #quizResultBox .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Blog: featured story card alignment on tablet & mobile */
+@media (max-width: 1023px) {
+  .featured-article-card {
+    gap: 0;
+  }
+
+  .featured-article-card > img {
+    display: block;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 639px) {
+  .featured-article-card > div {
+    padding: 22px 20px !important;
+  }
+
+  .featured-article-card > div > div:first-child > div:first-child {
+    flex-wrap: wrap;
+    gap: 6px 10px !important;
+  }
+
+  .featured-article-card .product-badge {
+    white-space: nowrap;
+  }
+
+  .featured-article-card h2 {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .featured-article-card > div > div:last-child {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 14px;
+  }
+
+  .featured-article-card > div > div:last-child .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ===================================================================
+   BUTTON ALIGNMENT FIXES (all pages)
+   - icon spacing handled by the button's gap (no extra margins)
+   - buttons that wrap keep a readable line-height
+   - stacked hero / CTA buttons share one width and left edge on mobile
+   =================================================================== */
+.btn i,
+.header-cta-btn i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  line-height: 1;
+}
+
+@media (max-width: 639px) {
+  .btn {
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}

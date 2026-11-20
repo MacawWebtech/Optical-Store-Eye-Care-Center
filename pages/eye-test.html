@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Eye Test Appointment — Veyra Optique</title>
+  <meta name="description" content="Schedule a 30-minute comprehensive digital eye examination with certified Optometrists at Veyra Optique. Complete with retinal imaging and vision test.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+    <!-- Theme & RTL Direction Initialization (Anti-FOUC) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('stackly-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        if (localStorage.getItem('stackly-rtl') === 'true') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand-logo">
+          <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" />
+          <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" />
+        </a>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">Home 1: Optical Store</a>
+              <a href="index-2.html" class="dropdown-link">Home 2: Eye Boutique</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item"><a href="eye-test.html" class="nav-link active">Eye Test</a></li>
+          <li class="nav-item"><a href="lens-guide.html" class="nav-link">Lens Guide</a></li>
+          <li class="nav-item"><a href="store-locator.html" class="nav-link">Stores</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Editorial</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+        <a href="products.html?view=wishlist" class="action-btn" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="badge-count wishlist-badge-count">2</span></a>
+        <button class="action-btn cart-toggle-btn" aria-label="Cart"><i class="bi bi-bag"></i><span class="badge-count cart-badge-count">1</span></button>
+        <button class="action-btn theme-toggle-btn" aria-label="Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="action-btn rtl-toggle-btn" aria-label="RTL"><span class="rtl-btn-text" style="font-size: 0.75rem; font-weight: 800;">RTL</span></button>
+        <a href="eye-test.html" class="header-cta-btn"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+        <button class="mobile-toggle-btn"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-hero page-hero-eyetest">
+    <div class="site-container">
+      <div class="eyebrow">Certified Clinical Optometry</div>
+      <h1 style="color: #FFF; font-size: clamp(2.2rem, 3.8vw, 3.4rem); margin-bottom: 12px;">Book Your Comprehensive Eye Examination</h1>
+      <p style="color: var(--color-muted-light); font-size: 1.1rem; max-width: 650px;">
+        High-resolution digital retinal photography, precise refraction analysis, and personalized eye-care consultations by licensed Doctors of Optometry.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main 7-Step Interactive Booking Engine -->
+  <section class="section-full">
+    <div class="site-container">
+      
+      <div class="booking-workflow-wrapper">
+        <!-- Progress Stepper Header -->
+        <div class="booking-progress-header">
+          <div class="progress-step-indicator active" data-step="1">
+            <div class="step-circle">1</div>
+            <span class="step-label">Exam Type</span>
+          </div>
+          <div class="progress-step-indicator" data-step="2">
+            <div class="step-circle">2</div>
+            <span class="step-label">Location</span>
+          </div>
+          <div class="progress-step-indicator" data-step="3">
+            <div class="step-circle">3</div>
+            <span class="step-label">Date</span>
+          </div>
+          <div class="progress-step-indicator" data-step="4">
+            <div class="step-circle">4</div>
+            <span class="step-label">Time Slot</span>
+          </div>
+          <div class="progress-step-indicator" data-step="5">
+            <div class="step-circle">5</div>
+            <span class="step-label">Patient Info</span>
+          </div>
+          <div class="progress-step-indicator" data-step="6">
+            <div class="step-circle">6</div>
+            <span class="step-label">Review</span>
+          </div>
+          <div class="progress-step-indicator" data-step="7">
+            <div class="step-circle">7</div>
+            <span class="step-label">Receipt</span>
+          </div>
+        </div>
+
+        <!-- STEP 1: Select Appointment Type -->
+        <div class="booking-step-content active" data-step-content="1">
+          <div class="eyebrow">Step 01 of 07</div>
+          <h3>Select Your Clinical Appointment Type</h3>
+          <p style="margin-bottom: 24px;">All exams are conducted by licensed Optometrists using digital non-invasive diagnostic suites.</p>
+
+          <div class="booking-option-grid">
+            <label class="booking-option-card selected">
+              <input type="radio" name="booking-type" value="Comprehensive Eye Examination (45 Mins)" data-price="$75 (Complimentary with frame purchase)" checked />
+              <div>
+                <h5 style="margin-bottom: 4px;">Comprehensive Vision &amp; Eye Exam</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 8px;">Full refractive assessment, intraocular pressure check, and digital fundus photography.</p>
+                <span style="font-weight: 700; color: var(--color-primary); font-size: 0.9rem;">$75 • 45 Minutes (Free with frame)</span>
+              </div>
+            </label>
+
+            <label class="booking-option-card">
+              <input type="radio" name="booking-type" value="Contact Lens Fitting &amp; Evaluation (30 Mins)" data-price="$85" />
+              <div>
+                <h5 style="margin-bottom: 4px;">Contact Lens Fitting &amp; Evaluation</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 8px;">Corneal curvature mapping, tear film assessment, and trial diagnostic lenses provided.</p>
+                <span style="font-weight: 700; color: var(--color-primary); font-size: 0.9rem;">$85 • 30 Minutes</span>
+              </div>
+            </label>
+
+            <label class="booking-option-card">
+              <input type="radio" name="booking-type" value="Digital Retinal Health &amp; Glaucoma Screening (30 Mins)" data-price="$95" />
+              <div>
+                <h5 style="margin-bottom: 4px;">Retinal Photography &amp; Glaucoma Scan</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 8px;">Specialized diagnostic scan for diabetic retinopathy, macular degeneration, and optic nerve health.</p>
+                <span style="font-weight: 700; color: var(--color-primary); font-size: 0.9rem;">$95 • 30 Minutes</span>
+              </div>
+            </label>
+
+            <label class="booking-option-card">
+              <input type="radio" name="booking-type" value="Pediatric Vision Exam (Age 5-17) (30 Mins)" data-price="$65" />
+              <div>
+                <h5 style="margin-bottom: 4px;">Pediatric Vision Assessment (Ages 5–17)</h5>
+                <p style="font-size: 0.85rem; margin-bottom: 8px;">Child-friendly screening for amblyopia (lazy eye), tracking dexterity, and school vision acuity.</p>
+                <span style="font-weight: 700; color: var(--color-primary); font-size: 0.9rem;">$65 • 30 Minutes</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- STEP 2: Select Store Location -->
+        <div class="booking-step-content" data-step-content="2">
+          <div class="eyebrow">Step 02 of 07</div>
+          <h3>Select Preferred Clinic or Optical Studio</h3>
+          <p style="margin-bottom: 24px;">Choose the location nearest to you. All clinics feature private diagnostic suites.</p>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <label class="booking-option-card selected">
+              <input type="radio" name="booking-store" value="Downtown Flagship Atelier (104 Grand Street, New York, NY)" checked />
+              <div>
+                <h5 style="margin-bottom: 2px;">Downtown Flagship Atelier</h5>
+                <p style="font-size: 0.88rem; margin-bottom: 4px;">104 Grand Street, New York, NY • (212) 555-0192</p>
+                <span style="font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">Dr. Elena Vance, Lead Optometrist • Mon-Sat 10am-8pm</span>
+              </div>
+            </label>
+
+            <label class="booking-option-card">
+              <input type="radio" name="booking-store" value="SoHo Design Studio &amp; Lab (482 Broadway, New York, NY)" />
+              <div>
+                <h5 style="margin-bottom: 2px;">SoHo Design Studio &amp; Lens Lab</h5>
+                <p style="font-size: 0.88rem; margin-bottom: 4px;">482 Broadway, New York, NY • (212) 555-0144</p>
+                <span style="font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">Marcus Sterling &amp; Dr. Priya Patel • 1-Hour Lens Edging</span>
+              </div>
+            </label>
+
+            <label class="booking-option-card">
+              <input type="radio" name="booking-store" value="Uptown Vision Clinic (1240 Madison Avenue, New York, NY)" />
+              <div>
+                <h5 style="margin-bottom: 2px;">Uptown Vision Clinic</h5>
+                <p style="font-size: 0.88rem; margin-bottom: 4px;">1240 Madison Avenue, New York, NY • (212) 555-0188</p>
+                <span style="font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">Specialty Pediatric &amp; Scleral Contact Lenses</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- STEP 3: Choose Appointment Date -->
+        <div class="booking-step-content" data-step-content="3">
+          <div class="eyebrow">Step 03 of 07</div>
+          <h3>Select Your Desired Date</h3>
+          <p style="margin-bottom: 24px;">Live real-time availability for the next 14 days. Sundays are reserved for private emergencies.</p>
+
+          <div id="bookingCalendarDays" class="calendar-days-grid">
+            <!-- Generated dynamically by booking.js -->
+          </div>
+        </div>
+
+        <!-- STEP 4: Select Time Slot -->
+        <div class="booking-step-content" data-step-content="4">
+          <div class="eyebrow">Step 04 of 07</div>
+          <h3>Select an Available Time Slot</h3>
+          <p style="margin-bottom: 24px;">Please arrive 10 minutes prior to your time for computerized pre-testing.</p>
+
+          <div class="time-slot-grid" id="bookingTimeSlots">
+            <!-- Generated dynamically by booking.js -->
+          </div>
+        </div>
+
+        <!-- STEP 5: Patient Details & Form -->
+        <div class="booking-step-content" data-step-content="5">
+          <div class="eyebrow">Step 05 of 07</div>
+          <h3>Patient Legal Contact &amp; Health Information</h3>
+          <p style="margin-bottom: 24px;">Your medical information is strictly HIPAA encrypted and never shared.</p>
+
+          <div class="form-row-2" style="gap: 20px;">
+            <div class="form-group">
+              <label class="form-label">Patient Legal Full Name *</label>
+              <input type="text" id="patientFullName" class="form-control" placeholder="e.g. Jonathan Lewis" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address (for appointment confirmation) *</label>
+              <input type="email" id="patientEmail" class="form-control" placeholder="jonathan@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mobile Phone Number (for SMS text reminders) *</label>
+              <input type="tel" id="patientPhone" class="form-control" placeholder="(555) 000-0000" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Vision Insurance Carrier</label>
+              <select id="patientInsurance" class="form-control">
+                <option value="Direct Self-Pay (No Insurance)">Direct Self-Pay (No Insurance)</option>
+                <option value="VSP (Vision Service Plan)">VSP (Vision Service Plan)</option>
+                <option value="EyeMed Vision Care">EyeMed Vision Care</option>
+                <option value="Davis Vision">Davis Vision</option>
+                <option value="Spectera / UnitedHealthcare">Spectera / UnitedHealthcare</option>
+                <option value="BlueCross BlueShield">BlueCross BlueShield</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Existing Symptoms or Special Notes (Optional)</label>
+            <textarea id="patientNotes" class="form-control" rows="3" placeholder="e.g. Blurry distance vision, dry eyes at computer, interested in progressive lenses..."></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 6: Review Summary -->
+        <div class="booking-step-content" data-step-content="6">
+          <div class="eyebrow">Step 06 of 07</div>
+          <h3>Review Appointment Details</h3>
+          <p style="margin-bottom: 20px;">Please confirm the accuracy of your clinical appointment request before booking.</p>
+
+          <div id="bookingSummaryContent">
+            <!-- Rendered by booking.js -->
+          </div>
+        </div>
+
+        <!-- STEP 7: Confirmation Receipt Screen -->
+        <div class="booking-step-content" data-step-content="7">
+          <div id="bookingConfirmationReceipt">
+            <!-- Rendered by booking.js -->
+          </div>
+        </div>
+
+        <!-- Navigation Next / Prev Buttons -->
+        <div class="booking-nav-buttons">
+          <button type="button" class="btn btn-outline" id="btnBookingPrev" style="display: none;">
+            <i class="bi bi-arrow-left me-1"></i> Back
+          </button>
+          <div style="flex-grow: 1;"></div>
+          <button type="button" class="btn btn-primary" id="btnBookingNext">
+            Continue →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What to Expect Educational Section -->
+  <section class="section-full bg-surface">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <div class="eyebrow">What to Expect</div>
+        <h2>Your Clinical Exam Experience</h2>
+        <p>A gentle, unhurried, non-invasive process engineered for diagnostic accuracy.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <div style="background-color: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 32px 24px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background-color: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">
+            01
+          </div>
+          <h4 style="margin-bottom: 8px;">Digital Wavefront Pre-Test</h4>
+          <p style="font-size: 0.9rem;">
+            Before meeting the doctor, our automated corneal topographer measures higher-order optical aberrations and baseline refractive power in 90 seconds.
+          </p>
+        </div>
+
+        <div style="background-color: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 32px 24px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background-color: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">
+            02
+          </div>
+          <h4 style="margin-bottom: 8px;">Doctor Consultation</h4>
+          <p style="font-size: 0.9rem;">
+            Dr. Vance conducts a subjective lens refraction, tests ocular binocular coordination, and evaluates accommodation power for digital screen.
+          </p>
+        </div>
+
+        <div style="background-color: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 32px 24px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background-color: var(--color-primary-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 16px;">
+            03
+          </div>
+          <h4 style="margin-bottom: 8px;">Personalized Lens Prescription</h4>
+          <p style="font-size: 0.9rem;">
+            Receive your verified optical prescription immediately. Our frame stylists will assist in measuring your exact Pupillary Distance (PD) and pantoscopic tilt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GLOBAL SITE FOOTER
+       ========================================== -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Veyra Optique">
+            <img src="../assets/images/logo-white.svg" alt="Veyra Optique" style="height: 38px;" />
+          </a>
+          <p>
+            Veyra Optique merges modern editorial eyewear design with certified ophthalmological health services. Handcrafted Italian bio-acetate frames &amp; precision digital lenses.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Collections -->
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links-list">
+            <li><a href="products.html?cat=eyeglasses">Prescription Eyeglasses</a></li>
+            <li><a href="products.html?cat=sunglasses">Polarized Sunglasses</a></li>
+            <li><a href="products.html?cat=bluelight">Blue-Light Blocking</a></li>
+            <li><a href="products.html?cat=contacts">Contact Lenses</a></li>
+            <li><a href="products.html?cat=readers">Reading Glasses</a></li>
+            <li><a href="products.html?shape=titanium">Pure Titanium Series</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="footer-col">
+          <h5>Eye Care</h5>
+          <ul class="footer-links-list">
+            <li><a href="eye-test.html">Book Eye Examination</a></li>
+            <li><a href="lens-guide.html">Optical Lens Guide</a></li>
+            <li><a href="eye-test.html#contact-fitting">Contact Lens Fitting</a></li>
+            <li><a href="eye-test.html#retinal-scan">Digital Retinal Scan</a></li>
+            <li><a href="store-locator.html">Store Locator &amp; Hours</a></li>
+            <li><a href="about.html#opticians">Meet Our Optometrists</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support -->
+        <div class="footer-col">
+          <h5>Client Support</h5>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Concierge Assistance</a></li>
+            <li><a href="cart.html">Shopping Cart &amp; Bag</a></li>
+            <li><a href="checkout.html">Checkout Flow</a></li>
+            <li><a href="login.html">Sign In / Register</a></li>
+            <li><a href="coming-soon.html">Upcoming Releases</a></li>
+            <li><a href="404.html">System Error 404</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Hours & Help -->
+        <div class="footer-col">
+          <h5>Atelier Hours</h5>
+          <p style="color: var(--color-muted-light); font-size: 0.9rem; margin-bottom: 12px;">
+            Monday – Saturday: 10am – 8pm<br>
+            Sunday: 11am – 6pm
+          </p>
+          <div style="margin-top: 18px;">
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-primary); font-weight: 700; letter-spacing: 0.05em;">Concierge Optical Line:</span>
+            <div style="font-weight: 700; font-size: 1.1rem; color: #FFFFFF; margin-top: 2px;">+1 (800) 555-EYES</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Veyra Optique &amp; Eye Care Centers Inc. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">FDA Optical Compliance</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal & Cart Drawer & Mobile Nav -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-box" style="max-width: 600px; padding: 36px;">
+      <button class="modal-close-btn search-modal-close"><i class="bi bi-x-lg"></i></button>
+      <h3>Search Eyewear</h3>
+      <form action="products.html" method="GET" style="display: flex; gap: 10px; margin-top: 20px;">
+        <input type="text" name="search" class="form-control" placeholder="Search frames..." required />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h4 style="margin: 0;"><i class="bi bi-bag" style="color: var(--color-primary)"></i> Bag (<span class="cart-badge-count">1</span>)</h4>
+      <button class="action-btn cart-drawer-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+        <span style="color: var(--text-muted);">Estimated Subtotal</span>
+        <span class="drawer-subtotal-val" style="font-size: 1.4rem; font-weight: 800;">$145.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" style="height: 34px;" />
+      <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" style="height: 34px;" />
+      <button class="action-btn mobile-nav-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home 1: Optical Store</a>
+      <a href="index-2.html" class="mobile-nav-link">Home 2: Eye Boutique</a>
+      <a href="products.html" class="mobile-nav-link">Products</a>
+      <a href="eye-test.html" class="mobile-nav-link active">Book Eye Test</a>
+      <a href="lens-guide.html" class="mobile-nav-link">Lens Guide</a>
+      <a href="store-locator.html" class="mobile-nav-link">Stores</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="blog.html" class="mobile-nav-link">Editorial</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-controls-row">
+        <button class="btn btn-outline btn-sm theme-toggle-btn" style="flex: 1;"><i class="bi bi-moon-stars-fill me-1"></i> Theme</button>
+        <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span class="rtl-btn-text">RTL</span></button>
+      </div>
+      <a href="eye-test.html" class="btn btn-primary btn-block"><i class="bi bi-calendar2-check me-1"></i> Book Eye Test</a>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <!-- Tablet & Mobile Bottom App Menu Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Quick Action Menu Bar">
+    <div class="mobile-bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="bottom-nav-item">
+        <i class="bi bi-grid"></i>
+        <span>Catalog</span>
+      </a>
+      <a href="eye-test.html" class="bottom-nav-item bottom-nav-featured active" title="Book Eye Exam">
+        <div class="bottom-nav-circle">
+          <i class="bi bi-calendar2-check-fill"></i>
+        </div>
+        <span>Book Exam</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item cart-toggle-btn">
+        <div class="bottom-nav-icon-wrap">
+          <i class="bi bi-bag"></i>
+          <span class="badge-count cart-badge-count">1</span>
+        </div>
+        <span>Cart</span>
+      </a>
+      <button class="bottom-nav-item mobile-toggle-btn" aria-label="More Menu">
+        <i class="bi bi-list"></i>
+        <span>Menu</span>
+      </button>
+    </div>
+  </nav>
+</body>
+</html>

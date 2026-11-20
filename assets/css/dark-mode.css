@@ -1,0 +1,183 @@
+/* ===================================================================
+   VEYRA OPTICAL STORE & EYE CARE CENTER
+   Dark Mode Stylesheet - Comprehensive Contrast & Luxury Midnight Palette
+   Strict Three-Color Rule: Black / Midnight, Pure White, Primary Sedona Terracotta (#C2410C)
+   =================================================================== */
+
+[data-theme="dark"] {
+  /* Semantic Color Overrides */
+  --bg-body: #0C0D0E;
+  --bg-surface: #141517;
+  --bg-card: #1C1D20;
+  --bg-alt: #101113;
+  --text-main: #F9FAFB;
+  --text-muted: #9CA3AF;
+  --text-inverse: #111827;
+  --border-color: #2B2C30;
+  --header-bg: rgba(12, 13, 14, 0.94);
+  --header-border: #232427;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Primary Sedona Terracotta remains strictly identical (#C2410C) in both Light & Dark modes */
+  --color-primary: #C2410C;
+  --color-primary-hover: #9A3412;
+  --color-primary-light: rgba(194, 65, 12, 0.14);
+  --color-primary-subtle: rgba(194, 65, 12, 0.22);
+}
+
+/* Logo toggling */
+[data-theme="dark"] .logo-light-mode {
+  display: none !important;
+}
+
+[data-theme="dark"] .logo-dark-mode {
+  display: inline-block !important;
+}
+
+/* Card & Surface treatments */
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .category-card,
+[data-theme="dark"] .shape-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .store-card,
+[data-theme="dark"] .modal-box,
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .booking-workflow-wrapper,
+[data-theme="dark"] .cart-drawer,
+[data-theme="dark"] .discovery-quiz-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .mobile-menu-bar {
+  background-color: var(--header-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .mobile-menu-item {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .mobile-menu-item:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+[data-theme="dark"] .mobile-menu-item.active {
+  background-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .mobile-bottom-nav {
+  background-color: rgba(18, 19, 22, 0.96);
+  border-color: var(--border-color);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .product-media {
+  background-color: #161719;
+}
+
+[data-theme="dark"] .product-img {
+  filter: contrast(1.05) brightness(0.98);
+}
+
+[data-theme="dark"] .card-action-btn {
+  background-color: #1F2937;
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .card-action-btn:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .product-rating i,
+[data-theme="dark"] .bi-star-fill,
+[data-theme="dark"] .bi-star-half {
+  color: var(--color-primary) !important;
+}
+
+/* Form controls in Dark Mode */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] select.form-control {
+  background-color: #141517;
+  border-color: var(--border-color);
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--color-primary);
+  background-color: #1C1D20;
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #9CA3AF;
+}
+
+/* Table styling in Dark Mode */
+[data-theme="dark"] .lens-table th {
+  background-color: #111827;
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .lens-table td {
+  border-bottom-color: var(--border-color);
+}
+
+/* Booking stepper in Dark Mode */
+[data-theme="dark"] .step-circle {
+  background-color: #111827;
+  border-color: #374151;
+  color: #9CA3AF;
+}
+
+[data-theme="dark"] .time-slot-chip {
+  background-color: #111827;
+  border-color: #374151;
+  color: #E5E7EB;
+}
+
+[data-theme="dark"] .time-slot-chip:hover {
+  border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .booking-option-card {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+/* Button overrides in Dark Mode */
+[data-theme="dark"] .btn-outline {
+  border-color: #374151;
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+[data-theme="dark"] .action-btn {
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle border lines */
+[data-theme="dark"] hr,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-top {
+  border-color: var(--border-color) !important;
+}

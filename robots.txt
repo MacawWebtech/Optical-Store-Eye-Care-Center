@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pages/checkout.html
+Disallow: /pages/maintenance.html
+
+Sitemap: https://veyra-optique.com/sitemap.xml

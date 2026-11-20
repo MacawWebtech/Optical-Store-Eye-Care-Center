@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyewear Catalog — Veyra Optique</title>
+  <meta name="description" content="Shop handcrafted eyeglasses, polarized sunglasses, blue-light filtering glasses, and daily contact lenses. Filter by shape, lens type, color, and material.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+    <!-- Theme & RTL Direction Initialization (Anti-FOUC) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('stackly-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        if (localStorage.getItem('stackly-rtl') === 'true') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand-logo">
+          <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" />
+          <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" />
+        </a>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">Home 1: Optical Store</a>
+              <a href="index-2.html" class="dropdown-link">Home 2: Eye Boutique</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link active">Products</a>
+          </li>
+          <li class="nav-item"><a href="eye-test.html" class="nav-link">Eye Test</a></li>
+          <li class="nav-item"><a href="lens-guide.html" class="nav-link">Lens Guide</a></li>
+          <li class="nav-item"><a href="store-locator.html" class="nav-link">Stores</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Editorial</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+        <a href="products.html?view=wishlist" class="action-btn" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="badge-count wishlist-badge-count">2</span></a>
+        <button class="action-btn cart-toggle-btn" aria-label="Cart"><i class="bi bi-bag"></i><span class="badge-count cart-badge-count">1</span></button>
+        <button class="action-btn theme-toggle-btn" aria-label="Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="action-btn rtl-toggle-btn" aria-label="RTL"><span class="rtl-btn-text" style="font-size: 0.75rem; font-weight: 800;">RTL</span></button>
+        <a href="eye-test.html" class="header-cta-btn"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+        <button class="mobile-toggle-btn"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-hero page-hero-products">
+    <div class="site-container">
+      <div class="eyebrow">Catalog &amp; Collections</div>
+      <h1 style="color: #FFF; font-size: clamp(2.2rem, 3.5vw, 3.2rem); margin-bottom: 8px;">The Eyewear Gallery</h1>
+      <p style="color: var(--color-muted-light); max-width: 650px;">
+        Explore handcrafted Italian bio-acetate and Japanese titanium frames. All prices include single-vision anti-reflective prescription lenses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Catalog Section with Sidebar Filters -->
+  <section class="section-full">
+    <div class="site-container">
+      <!-- Top Filter Bar & Controls -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color);">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <!-- Quick Search -->
+          <div style="position: relative; width: 300px; max-width: 100%;">
+            <input type="text" id="catalogSearchInput" class="form-control" placeholder="Search by name, shape, style..." style="padding-left: 40px; height: 44px; border-radius: var(--radius-full);" />
+            <i class="bi bi-search" style="position: absolute; left: 16px; top: 13px; color: var(--text-muted);"></i>
+          </div>
+
+          <span id="productCountBadge" style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">
+            Showing 13 of 13 Eyewear Models
+          </span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <!-- Sorting Dropdown -->
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <label style="font-size: 0.88rem; font-weight: 600; color: var(--text-muted); white-space: nowrap;">Sort By:</label>
+            <select id="catalogSortSelect" class="form-control" style="width: 180px; height: 44px; padding: 6px 14px; border-radius: var(--radius-md);">
+              <option value="featured">Featured / Curated</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+              <option value="newest">Newest Arrivals</option>
+            </select>
+          </div>
+
+          <!-- View Mode Toggle (Grid vs List) -->
+          <div style="display: flex; border: 1.5px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden;">
+            <button id="viewGridBtn" class="action-btn active" style="width: 42px; height: 42px; border-radius: 0;" title="Grid View">
+              <i class="bi bi-grid-3x3-gap"></i>
+            </button>
+            <button id="viewListBtn" class="action-btn" style="width: 42px; height: 42px; border-radius: 0;" title="List View">
+              <i class="bi bi-list-ul"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter panel toggle (tablet & mobile) -->
+      <button type="button" id="filterToggleBtn" class="filter-toggle-btn" aria-controls="catalogFilters" aria-expanded="false">
+        <i class="bi bi-sliders"></i> Filters <span id="activeFilterCount" class="filter-count" style="display:none;">0</span>
+      </button>
+
+      <!-- Main Layout: Sidebar Filters + Products Grid -->
+      <div class="catalog-layout">
+        
+        <!-- Filter Sidebar Panel -->
+        <aside id="catalogFilters" class="catalog-filters" style="background-color: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border-color);">
+            <h4 style="font-size: 1.1rem; margin: 0; display: flex; align-items: center; gap: 8px;">
+              <i class="bi bi-sliders" style="color: var(--color-primary);"></i> Filter Frames
+            </h4>
+            <button onclick="resetAllFilters()" style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase;">Reset</button>
+          </div>
+
+          <!-- Filter Group: Categories -->
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label class="form-label">Category</label>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <a href="products.html?cat=all" data-filter-category="all" class="active" style="font-size: 0.9rem; font-weight: 600;">• All Categories</a>
+              <a href="products.html?cat=eyeglasses" data-filter-category="eyeglasses" style="font-size: 0.9rem; font-weight: 600;">• Prescription Eyeglasses</a>
+              <a href="products.html?cat=sunglasses" data-filter-category="sunglasses" style="font-size: 0.9rem; font-weight: 600;">• Polarized Sunglasses</a>
+              <a href="products.html?cat=bluelight" data-filter-category="bluelight" style="font-size: 0.9rem; font-weight: 600;">• Blue-Light ScreenGuard</a>
+              <a href="products.html?cat=contacts" data-filter-category="contacts" style="font-size: 0.9rem; font-weight: 600;">• Contact Lenses</a>
+              <a href="products.html?cat=readers" data-filter-category="readers" style="font-size: 0.9rem; font-weight: 600;">• Reading Glasses</a>
+            </div>
+          </div>
+
+          <!-- Filter Group: Frame Shape -->
+          <div class="form-group" style="margin-bottom: 24px; border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <label class="form-label">Frame Shape</label>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="all" checked style="accent-color: var(--color-primary);" /> All Shapes
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="rectangle" style="accent-color: var(--color-primary);" /> Rectangle
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="round" style="accent-color: var(--color-primary);" /> Round
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="square" style="accent-color: var(--color-primary);" /> Square
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="aviator" style="accent-color: var(--color-primary);" /> Aviator
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="cateye" style="accent-color: var(--color-primary);" /> Cat-Eye
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="wayfarer" style="accent-color: var(--color-primary);" /> Wayfarer
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="geometric" style="accent-color: var(--color-primary);" /> Geometric
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-shape" value="rimless" style="accent-color: var(--color-primary);" /> Rimless
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Lens Type -->
+          <div class="form-group" style="margin-bottom: 24px; border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <label class="form-label">Lens Technology</label>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-lens" value="all" checked style="accent-color: var(--color-primary);" /> All Lenses
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-lens" value="single" style="accent-color: var(--color-primary);" /> Single Vision
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-lens" value="progressive" style="accent-color: var(--color-primary);" /> Progressive Multi-Focal
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-lens" value="bifocal" style="accent-color: var(--color-primary);" /> Bifocal
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-lens" value="blue-filter" style="accent-color: var(--color-primary);" /> 420nm Blue-Light Filter
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-lens" value="uv" style="accent-color: var(--color-primary);" /> Polarized UV400
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Material -->
+          <div class="form-group" style="margin-bottom: 24px; border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <label class="form-label">Frame Material</label>
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-material" value="all" checked style="accent-color: var(--color-primary);" /> All Materials
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-material" value="acetate" style="accent-color: var(--color-primary);" /> Italian Mazzucchelli Bio-Acetate
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-material" value="titanium" style="accent-color: var(--color-primary);" /> Japanese Beta-Titanium
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-material" value="metal" style="accent-color: var(--color-primary);" /> Surgical Stainless Steel
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="filter-material" value="eco-bio" style="accent-color: var(--color-primary);" /> Eco-Bio (Contact Lenses)
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Color Swatches -->
+          <div class="form-group" style="margin-bottom: 24px; border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <label class="form-label">Frame Color</label>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <button class="filter-color-btn active" data-color="all" style="padding: 4px 10px; border-radius: var(--radius-full); border: 1.5px solid var(--border-color); font-size: 0.75rem; font-weight: 700;">All</button>
+              <button class="filter-color-btn" data-color="black" style="width: 24px; height: 24px; border-radius: 50%; background: #111827; border: 1.5px solid var(--border-color);" title="Onyx Black"></button>
+              <button class="filter-color-btn" data-color="white" style="width: 24px; height: 24px; border-radius: 50%; background: #FFFFFF; border: 1.5px solid var(--border-color);" title="Crystal White"></button>
+              <button class="filter-color-btn" data-color="terracotta" style="width: 24px; height: 24px; border-radius: 50%; background: #C2410C; border: 1.5px solid var(--border-color);" title="Sedona Terracotta"></button>
+            </div>
+          </div>
+
+          <!-- Filter Group: Wishlist -->
+          <div class="form-group" style="margin-bottom: 24px; border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600;">
+              <input type="checkbox" id="wishlistOnlyToggle" style="accent-color: var(--color-primary);" /> Show wishlist items only
+            </label>
+          </div>
+
+          <!-- Filter Group: Max Price Range -->
+          <div class="form-group" style="border-top: 1px solid var(--border-color); padding-top: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+              <label class="form-label" style="margin: 0;">Max Price</label>
+              <span id="priceRangeDisplay" style="font-weight: 700; color: var(--color-primary);">$300</span>
+            </div>
+            <input type="range" id="priceRangeSlider" min="50" max="300" step="10" value="300" style="width: 100%; accent-color: var(--color-primary);" />
+          </div>
+
+          <button type="button" id="filterApplyBtn" class="btn btn-primary btn-block filter-apply-btn">Show Results</button>
+        </aside>
+
+        <!-- Product Grid Container (Dynamically managed by products.js) -->
+        <main>
+          <div id="activeFilterChips" class="active-filter-chips" style="display:none;" aria-live="polite"></div>
+          <div id="productGridContainer" class="product-grid cols-3">
+            <!-- Cards rendered here by products.js -->
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GLOBAL SITE FOOTER
+       ========================================== -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Veyra Optique">
+            <img src="../assets/images/logo-white.svg" alt="Veyra Optique" style="height: 38px;" />
+          </a>
+          <p>
+            Veyra Optique merges modern editorial eyewear design with certified ophthalmological health services. Handcrafted Italian bio-acetate frames &amp; precision digital lenses.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Collections -->
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links-list">
+            <li><a href="products.html?cat=eyeglasses">Prescription Eyeglasses</a></li>
+            <li><a href="products.html?cat=sunglasses">Polarized Sunglasses</a></li>
+            <li><a href="products.html?cat=bluelight">Blue-Light Blocking</a></li>
+            <li><a href="products.html?cat=contacts">Contact Lenses</a></li>
+            <li><a href="products.html?cat=readers">Reading Glasses</a></li>
+            <li><a href="products.html?shape=titanium">Pure Titanium Series</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="footer-col">
+          <h5>Eye Care</h5>
+          <ul class="footer-links-list">
+            <li><a href="eye-test.html">Book Eye Examination</a></li>
+            <li><a href="lens-guide.html">Optical Lens Guide</a></li>
+            <li><a href="eye-test.html#contact-fitting">Contact Lens Fitting</a></li>
+            <li><a href="eye-test.html#retinal-scan">Digital Retinal Scan</a></li>
+            <li><a href="store-locator.html">Store Locator &amp; Hours</a></li>
+            <li><a href="about.html#opticians">Meet Our Optometrists</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support -->
+        <div class="footer-col">
+          <h5>Client Support</h5>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Concierge Assistance</a></li>
+            <li><a href="cart.html">Shopping Cart &amp; Bag</a></li>
+            <li><a href="checkout.html">Checkout Flow</a></li>
+            <li><a href="login.html">Sign In / Register</a></li>
+            <li><a href="coming-soon.html">Upcoming Releases</a></li>
+            <li><a href="404.html">System Error 404</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Hours & Help -->
+        <div class="footer-col">
+          <h5>Atelier Hours</h5>
+          <p style="color: var(--color-muted-light); font-size: 0.9rem; margin-bottom: 12px;">
+            Monday – Saturday: 10am – 8pm<br>
+            Sunday: 11am – 6pm
+          </p>
+          <div style="margin-top: 18px;">
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-primary); font-weight: 700; letter-spacing: 0.05em;">Concierge Optical Line:</span>
+            <div style="font-weight: 700; font-size: 1.1rem; color: #FFFFFF; margin-top: 2px;">+1 (800) 555-EYES</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Veyra Optique &amp; Eye Care Centers Inc. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">FDA Optical Compliance</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-box" style="max-width: 600px; padding: 36px;">
+      <button class="modal-close-btn search-modal-close"><i class="bi bi-x-lg"></i></button>
+      <h3>Search Eyewear</h3>
+      <form action="products.html" method="GET" style="display: flex; gap: 10px; margin-top: 20px;">
+        <input type="text" name="search" class="form-control" placeholder="Search frames..." required />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h4 style="margin: 0;"><i class="bi bi-bag" style="color: var(--color-primary)"></i> Bag (<span class="cart-badge-count">1</span>)</h4>
+      <button class="action-btn cart-drawer-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+        <span style="color: var(--text-muted);">Estimated Subtotal</span>
+        <span class="drawer-subtotal-val" style="font-size: 1.4rem; font-weight: 800;">$145.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-box" style="max-width: 820px; padding: 0;">
+      <button class="modal-close-btn quickview-modal-close"><i class="bi bi-x-lg"></i></button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <!-- Virtual Try-On Modal -->
+  <div class="modal-overlay" id="tryOnModal">
+    <div class="modal-box" style="max-width: 900px; padding: 0;">
+      <button class="modal-close-btn tryon-modal-close"><i class="bi bi-x-lg"></i></button>
+      <div class="tryon-modal-container">
+        <div class="tryon-viewport">
+          <div id="simulatedModelFeed" style="width: 100%; height: 100%; position: relative;">
+            <img src="../assets/images/home/try-on-promo.jpg" alt="Facial Tracking" style="width: 100%; height: 100%; object-fit: cover;" />
+            <img id="tryonOverlayGlasses" src="../assets/images/products/frame-avery.jpg" alt="Glasses" style="position: absolute; width: 55%; top: 40%; left: 22.5%;" />
+          </div>
+        </div>
+        <div class="tryon-controls-panel">
+          <div>
+            <div class="eyebrow">Virtual AR Mirror</div>
+            <h3 id="tryonProductTitle">Avery Classic</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 24px;">Real-time digital simulation of frame proportions and temple curve.</p>
+            <button id="btnStartCamera" class="btn btn-outline-primary btn-block">Enable Live Webcam</button>
+          </div>
+          <button class="btn btn-primary btn-block" onclick="addProductToCart('prod-001')">Add Frame to Bag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" style="height: 34px;" />
+      <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" style="height: 34px;" />
+      <button class="action-btn mobile-nav-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home 1: Optical Store</a>
+      <a href="index-2.html" class="mobile-nav-link">Home 2: Eye Boutique</a>
+      <a href="products.html" class="mobile-nav-link active">Products</a>
+      <a href="eye-test.html" class="mobile-nav-link">Book Eye Test</a>
+      <a href="lens-guide.html" class="mobile-nav-link">Lens Guide</a>
+      <a href="store-locator.html" class="mobile-nav-link">Stores</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="blog.html" class="mobile-nav-link">Editorial</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-controls-row">
+        <button class="btn btn-outline btn-sm theme-toggle-btn" style="flex: 1;"><i class="bi bi-moon-stars-fill me-1"></i> Theme</button>
+        <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span class="rtl-btn-text">RTL</span></button>
+      </div>
+      <a href="eye-test.html" class="btn btn-primary btn-block"><i class="bi bi-calendar2-check me-1"></i> Book Eye Test</a>
+    </div>
+  </aside>
+
+  <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <!-- Tablet & Mobile Bottom App Menu Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Quick Action Menu Bar">
+    <div class="mobile-bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="bottom-nav-item active">
+        <i class="bi bi-grid"></i>
+        <span>Catalog</span>
+      </a>
+      <a href="eye-test.html" class="bottom-nav-item bottom-nav-featured" title="Book Eye Exam">
+        <div class="bottom-nav-circle">
+          <i class="bi bi-calendar2-check-fill"></i>
+        </div>
+        <span>Book Exam</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item cart-toggle-btn">
+        <div class="bottom-nav-icon-wrap">
+          <i class="bi bi-bag"></i>
+          <span class="badge-count cart-badge-count">1</span>
+        </div>
+        <span>Cart</span>
+      </a>
+      <button class="bottom-nav-item mobile-toggle-btn" aria-label="More Menu">
+        <i class="bi bi-list"></i>
+        <span>Menu</span>
+      </button>
+    </div>
+  </nav>
+</body>
+</html>

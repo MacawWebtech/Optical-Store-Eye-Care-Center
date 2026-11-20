@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optical Lens Guide &amp; Technology — Veyra Optique</title>
+  <meta name="description" content="Comprehensive optical lens guide: Single Vision, Digital Progressive, 420nm Blue Light Filters, Photochromic, and High-Index 1.67 lens materials explained.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+    <!-- Theme & RTL Direction Initialization (Anti-FOUC) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('stackly-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        if (localStorage.getItem('stackly-rtl') === 'true') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand-logo">
+          <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" />
+          <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" />
+        </a>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home <i class="bi bi-chevron-down" style="font-size: 0.75rem;"></i></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-link">Home 1: Optical Store</a>
+              <a href="index-2.html" class="dropdown-link">Home 2: Eye Boutique</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item"><a href="eye-test.html" class="nav-link">Eye Test</a></li>
+          <li class="nav-item"><a href="lens-guide.html" class="nav-link active">Lens Guide</a></li>
+          <li class="nav-item"><a href="store-locator.html" class="nav-link">Stores</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Editorial</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+        <a href="products.html?view=wishlist" class="action-btn" aria-label="Wishlist"><i class="bi bi-heart"></i><span class="badge-count wishlist-badge-count">2</span></a>
+        <button class="action-btn cart-toggle-btn" aria-label="Cart"><i class="bi bi-bag"></i><span class="badge-count cart-badge-count">1</span></button>
+        <button class="action-btn theme-toggle-btn" aria-label="Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="action-btn rtl-toggle-btn" aria-label="RTL"><span class="rtl-btn-text" style="font-size: 0.75rem; font-weight: 800;">RTL</span></button>
+        <a href="eye-test.html" class="header-cta-btn"><i class="bi bi-calendar2-check"></i> Book Eye Test</a>
+        <button class="mobile-toggle-btn"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-hero page-hero-lensguide">
+    <div class="site-container">
+      <div class="eyebrow">Educational Optique</div>
+      <h1 style="color: #FFF; font-size: clamp(2.2rem, 3.8vw, 3.4rem); margin-bottom: 12px;">The Complete Lens Technology Guide</h1>
+      <p style="color: var(--color-muted-light); font-size: 1.1rem; max-width: 650px;">
+        Demystifying lens types, aspheric index options, anti-reflective coatings, and how to read your optical doctor's prescription.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Lens Finder Quiz -->
+  <section class="section-full bg-surface">
+    <div class="site-container">
+      <div style="background-color: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-md);">
+        <div class="section-header text-center" style="margin-bottom: 30px;">
+          <div class="eyebrow">Interactive Assistant</div>
+          <h2>Find Your Ideal Lens in 3 Questions</h2>
+          <p>Our algorithm matches your visual routine with the right index and protective coatings.</p>
+        </div>
+
+        <div class="grid-3-col" style="margin-bottom: 30px;">
+          <div class="form-group">
+            <label class="form-label">1. Primary Daily Visual Activity?</label>
+            <select id="quizUsage" class="form-control" onchange="runLensQuiz()">
+              <option value="screen">Heavy Screen / Computer Work (&gt;6 hrs)</option>
+              <option value="general">Everyday Distance &amp; Driving</option>
+              <option value="reading">Close Reading / Book Studies</option>
+              <option value="mixed">Both Distance and Reading (Presbyopia)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">2. Prescription Strength (Sphere SPH)?</label>
+            <select id="quizSph" class="form-control" onchange="runLensQuiz()">
+              <option value="mild">Mild (-0.25 to -2.00 or +0.25 to +2.00)</option>
+              <option value="moderate">Moderate (-2.25 to -4.50)</option>
+              <option value="strong">High (-4.75 or higher)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">3. Outdoor Sun Sensitivity?</label>
+            <select id="quizSun" class="form-control" onchange="runLensQuiz()">
+              <option value="transitions">I want lenses that darken in sunlight</option>
+              <option value="clear">I prefer 100% clear lenses indoors</option>
+              <option value="sunglass">I want dedicated polarized sunglasses</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Quiz Recommendation Result Box -->
+        <div id="quizResultBox" style="background-color: var(--color-primary-light); border: 2px solid var(--color-primary); border-radius: var(--radius-md); padding: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: var(--color-primary); letter-spacing: 0.1em;">Doctor Recommended Lens Configuration</span>
+            <h4 style="margin: 4px 0 6px; font-size: 1.3rem;" id="quizLensTitle">Polycarbonate 1.59 with 420nm Blue-Light Guard</h4>
+            <p style="font-size: 0.9rem; margin: 0; color: var(--text-main);" id="quizLensDesc">
+              Ideal for all-day digital comfort, blocking high-energy visible light while providing featherweight impact resistance.
+            </p>
+          </div>
+          <a href="products.html" class="btn btn-primary">Browse Compatible Frames →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lens Types Comparison Table -->
+  <section class="section-full">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <div class="eyebrow">Comparison Matrix</div>
+        <h2>Lens Types &amp; Optical Designs Compared</h2>
+        <p>Understand the functional differences between single-vision, progressives, and specialized coatings.</p>
+      </div>
+
+      <div class="lens-comparison-table-wrap">
+        <table class="lens-table">
+          <thead>
+            <tr>
+              <th>Lens Type</th>
+              <th>Ideal For</th>
+              <th>Field of Vision</th>
+              <th>Refractive Index</th>
+              <th>Included Coatings</th>
+              <th>Base Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Lens Type"><strong>Standard Single Vision</strong></td>
+              <td data-label="Ideal For">Nearsightedness (Myopia) or Farsightedness (Hyperopia)</td>
+              <td data-label="Field of Vision">Full Edge-to-Edge</td>
+              <td data-label="Refractive Index">1.50 CR-39 / 1.59 Poly</td>
+              <td data-label="Included Coatings">Anti-Reflective, Scratch, UV400</td>
+              <td data-label="Base Price" class="highlight">Included ($0)</td>
+            </tr>
+            <tr>
+              <td data-label="Lens Type"><strong>Digital ScreenGuard 420</strong></td>
+              <td data-label="Ideal For">Coders, Designers, Students &amp; Heavy Screen Users</td>
+              <td data-label="Field of Vision">Full Edge-to-Edge</td>
+              <td data-label="Refractive Index">1.59 Aspheric Poly</td>
+              <td data-label="Included Coatings">420nm HEV Blue Cut + AR</td>
+              <td data-label="Base Price" class="highlight">+$50.00</td>
+            </tr>
+            <tr>
+              <td data-label="Lens Type"><strong>Free-Form Progressive</strong></td>
+              <td data-label="Ideal For">Presbyopia (Requires distance, intermediate &amp; reading)</td>
+              <td data-label="Field of Vision">Smooth 3-Corridor Zone</td>
+              <td data-label="Refractive Index">1.67 High-Index Thin</td>
+              <td data-label="Included Coatings">Broadband AR + Hydrophobic</td>
+              <td data-label="Base Price" class="highlight">+$120.00</td>
+            </tr>
+            <tr>
+              <td data-label="Lens Type"><strong>Transitions® Gen 8</strong></td>
+              <td data-label="Ideal For">Users desiring indoor clear &amp; outdoor sun in one pair</td>
+              <td data-label="Field of Vision">Full Edge-to-Edge</td>
+              <td data-label="Refractive Index">1.60 Impact Tough</td>
+              <td data-label="Included Coatings">Fast Photochromic Reaction</td>
+              <td data-label="Base Price" class="highlight">+$80.00</td>
+            </tr>
+            <tr>
+              <td data-label="Lens Type"><strong>Polarized Sun Tint</strong></td>
+              <td data-label="Ideal For">Drivers, boaters, and active outdoor glare reduction</td>
+              <td data-label="Field of Vision">Full Edge-to-Edge</td>
+              <td data-label="Refractive Index">1.50 High-Contrast Gray/Brown</td>
+              <td data-label="Included Coatings">Rear-Side AR + Hydrophobic</td>
+              <td data-label="Base Price" class="highlight">+$60.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-Layer Architecture Diagram -->
+  <section class="section-full bg-surface">
+    <div class="site-container">
+      <div class="feature-split-grid">
+        <div>
+          <img src="../assets/images/about/lens-diagram.jpg" alt="7-Layer Architecture" class="feature-split-img" />
+        </div>
+        <div>
+          <div class="eyebrow">Nanocoating Technology</div>
+          <h2>Why 7 Layers Make All the Difference</h2>
+          <p>
+            An uncoated lens loses over 8% of ambient light to surface glare, creating distracting halos at night and visual fatigue.
+          </p>
+
+          <div class="feature-checklist">
+            <div class="check-item"><i class="bi bi-droplet-half text-primary"></i><span class="check-text"><strong>Oleophobic Shield:</strong> Fingerprint oils and makeup smudge wipe clean with one microfiber swipe.</span></div>
+            <div class="check-item"><i class="bi bi-shield-shaded text-primary"></i><span class="check-text"><strong>Broadband Anti-Reflective:</strong> Eliminates glare in photographs, Zoom meetings, and nighttime highway driving.</span></div>
+            <div class="check-item"><i class="bi bi-sun text-primary"></i><span class="check-text"><strong>UV400 Solar Barrier:</strong> Protects the delicate lens crystalline and macula against early cataract development.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prescription Decoding Guide -->
+  <section class="section-full">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <div class="eyebrow">Doctor's Slip Decoded</div>
+        <h2>How to Read Your Optical Prescription</h2>
+        <p>Understand the acronyms and numbers written by your eye doctor.</p>
+      </div>
+
+      <div class="rx-table-wrap">
+        <table class="rx-table">
+          <caption>Sample Prescription</caption>
+          <thead>
+            <tr>
+              <th>Eye</th>
+              <th>SPH<small>Sphere</small></th>
+              <th>CYL<small>Cylinder</small></th>
+              <th>AXIS<small>Axis</small></th>
+              <th>ADD<small>Reading</small></th>
+              <th>PD<small>Pupil Dist.</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OD</strong><span>Right</span></td>
+              <td>-2.25</td>
+              <td>-0.75</td>
+              <td>180°</td>
+              <td>+1.50</td>
+              <td>31.5</td>
+            </tr>
+            <tr>
+              <td><strong>OS</strong><span>Left</span></td>
+              <td>-2.00</td>
+              <td>-0.50</td>
+              <td>175°</td>
+              <td>+1.50</td>
+              <td>31.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-4-col">
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+          <h5 style="color: var(--color-primary); margin-bottom: 4px;">OD vs. OS</h5>
+          <p style="font-size: 0.85rem;"><strong>OD:</strong> <em>Oculus Dexter</em> (Right Eye).<br><strong>OS:</strong> <em>Oculus Sinister</em> (Left Eye).</p>
+        </div>
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+          <h5 style="color: var(--color-primary); margin-bottom: 4px;">SPH (Sphere)</h5>
+          <p style="font-size: 0.85rem;">Indicates lens power for distance or reading. Negative (-) means nearsighted, positive (+).</p>
+        </div>
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+          <h5 style="color: var(--color-primary); margin-bottom: 4px;">CYL &amp; AXIS</h5>
+          <p style="font-size: 0.85rem;">Corrects astigmatism (irregular cornea curve). Axis (1° to 180°) determines orientation.</p>
+        </div>
+        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+          <h5 style="color: var(--color-primary); margin-bottom: 4px;">PD (Pupillary Distance)</h5>
+          <p style="font-size: 0.85rem;">The distance between your pupils in millimeters. Ensures the optical center aligns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lens Care Tips -->
+  <section class="section-full bg-surface">
+    <div class="site-container">
+      <div class="section-header text-center">
+        <div class="eyebrow">Longevity &amp; Care</div>
+        <h2>How to Care for Your Precision Lenses</h2>
+        <p>Simple daily habits to protect your multi-coatings for years to come.</p>
+      </div>
+
+      <div class="grid-3-col">
+        <div style="padding: 24px; border: 1.5px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 8px;"><i class="bi bi-check-circle"></i> DO: Use Lukewarm Water</div>
+          <p style="font-size: 0.88rem; margin: 0;">Rinse lenses under gentle lukewarm tap water before wiping to wash away micro-grit that causes scratches.</p>
+        </div>
+        <div style="padding: 24px; border: 1.5px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 8px;"><i class="bi bi-x-circle"></i> DON'T: Use Shirt Corners</div>
+          <p style="font-size: 0.88rem; margin: 0;">Wood-fiber t-shirts and paper napkins contain abrasive micro-fibers that wear away anti-reflective coats.</p>
+        </div>
+        <div style="padding: 24px; border: 1.5px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card);">
+          <div style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 8px;"><i class="bi bi-x-circle"></i> DON'T: Leave in Hot Cars</div>
+          <p style="font-size: 0.88rem; margin: 0;">Extreme dashboard heat can cause the multi-layer AR coating and lens substrate to expand at different rates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       GLOBAL SITE FOOTER
+       ========================================== -->
+<footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Veyra Optique">
+            <img src="../assets/images/logo-white.svg" alt="Veyra Optique" style="height: 38px;" />
+          </a>
+          <p>
+            Veyra Optique merges modern editorial eyewear design with certified ophthalmological health services. Handcrafted Italian bio-acetate frames &amp; precision digital lenses.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Collections -->
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links-list">
+            <li><a href="products.html?cat=eyeglasses">Prescription Eyeglasses</a></li>
+            <li><a href="products.html?cat=sunglasses">Polarized Sunglasses</a></li>
+            <li><a href="products.html?cat=bluelight">Blue-Light Blocking</a></li>
+            <li><a href="products.html?cat=contacts">Contact Lenses</a></li>
+            <li><a href="products.html?cat=readers">Reading Glasses</a></li>
+            <li><a href="products.html?shape=titanium">Pure Titanium Series</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="footer-col">
+          <h5>Eye Care</h5>
+          <ul class="footer-links-list">
+            <li><a href="eye-test.html">Book Eye Examination</a></li>
+            <li><a href="lens-guide.html">Optical Lens Guide</a></li>
+            <li><a href="eye-test.html#contact-fitting">Contact Lens Fitting</a></li>
+            <li><a href="eye-test.html#retinal-scan">Digital Retinal Scan</a></li>
+            <li><a href="store-locator.html">Store Locator &amp; Hours</a></li>
+            <li><a href="about.html#opticians">Meet Our Optometrists</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support -->
+        <div class="footer-col">
+          <h5>Client Support</h5>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Concierge Assistance</a></li>
+            <li><a href="cart.html">Shopping Cart &amp; Bag</a></li>
+            <li><a href="checkout.html">Checkout Flow</a></li>
+            <li><a href="login.html">Sign In / Register</a></li>
+            <li><a href="coming-soon.html">Upcoming Releases</a></li>
+            <li><a href="404.html">System Error 404</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Hours & Help -->
+        <div class="footer-col">
+          <h5>Atelier Hours</h5>
+          <p style="color: var(--color-muted-light); font-size: 0.9rem; margin-bottom: 12px;">
+            Monday – Saturday: 10am – 8pm<br>
+            Sunday: 11am – 6pm
+          </p>
+          <div style="margin-top: 18px;">
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-primary); font-weight: 700; letter-spacing: 0.05em;">Concierge Optical Line:</span>
+            <div style="font-weight: 700; font-size: 1.1rem; color: #FFFFFF; margin-top: 2px;">+1 (800) 555-EYES</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Veyra Optique &amp; Eye Care Centers Inc. All rights reserved.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">FDA Optical Compliance</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal & Cart Drawer & Mobile Nav -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-box" style="max-width: 600px; padding: 36px;">
+      <button class="modal-close-btn search-modal-close"><i class="bi bi-x-lg"></i></button>
+      <h3>Search Eyewear</h3>
+      <form action="products.html" method="GET" style="display: flex; gap: 10px; margin-top: 20px;">
+        <input type="text" name="search" class="form-control" placeholder="Search frames..." required />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer">
+    <div class="cart-drawer-header">
+      <h4 style="margin: 0;"><i class="bi bi-bag" style="color: var(--color-primary)"></i> Bag (<span class="cart-badge-count">1</span>)</h4>
+      <button class="action-btn cart-drawer-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+        <span style="color: var(--text-muted);">Estimated Subtotal</span>
+        <span class="drawer-subtotal-val" style="font-size: 1.4rem; font-weight: 800;">$145.00</span>
+      </div>
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <img src="../assets/images/logo.svg" alt="Veyra" class="logo-light-mode" style="height: 34px;" />
+      <img src="../assets/images/logo-white.svg" alt="Veyra" class="logo-dark-mode" style="height: 34px;" />
+      <button class="action-btn mobile-nav-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home 1: Optical Store</a>
+      <a href="index-2.html" class="mobile-nav-link">Home 2: Eye Boutique</a>
+      <a href="products.html" class="mobile-nav-link">Products</a>
+      <a href="eye-test.html" class="mobile-nav-link">Book Eye Test</a>
+      <a href="lens-guide.html" class="mobile-nav-link active">Lens Guide</a>
+      <a href="store-locator.html" class="mobile-nav-link">Stores</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="blog.html" class="mobile-nav-link">Editorial</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div class="mobile-controls-row">
+        <button class="btn btn-outline btn-sm theme-toggle-btn" style="flex: 1;"><i class="bi bi-moon-stars-fill me-1"></i> Theme</button>
+        <button class="btn btn-outline btn-sm rtl-toggle-btn" style="flex: 1;"><span class="rtl-btn-text">RTL</span></button>
+      </div>
+      <a href="eye-test.html" class="btn btn-primary btn-block"><i class="bi bi-calendar2-check me-1"></i> Book Eye Test</a>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function runLensQuiz() {
+      const usage = document.querySelector('#quizUsage').value;
+      const sph = document.querySelector('#quizSph').value;
+      const sun = document.querySelector('#quizSun').value;
+
+      const titleElem = document.querySelector('#quizLensTitle');
+      const descElem = document.querySelector('#quizLensDesc');
+
+      if (usage === 'screen') {
+        titleElem.textContent = 'ScreenGuard 420nm Digital Polycarbonate (Index 1.59)';
+        descElem.textContent = 'Blocks high-energy blue-violet screen light without yellowish hue. Includes anti-reflective coating to prevent monitor glare.';
+      } else if (usage === 'mixed') {
+        titleElem.textContent = 'Free-Form Digital Progressive Multi-Focal (Index 1.67)';
+        descElem.textContent = 'Seamless gradient from distance driving to computer monitor to phone text without awkward line borders.';
+      } else if (sun === 'transitions') {
+        titleElem.textContent = 'Transitions® Signature Gen 8 Light Intelligent Lenses';
+        descElem.textContent = 'Flawlessly transparent indoors, darkening in seconds under UV sunlight outdoors for all-in-one convenience.';
+      } else {
+        titleElem.textContent = sph === 'strong' ? 'Ultra-Thin High-Index 1.67 Aspheric Lenses' : 'Standard Aspheric Polycarbonate Lenses';
+        descElem.textContent = 'Delivers exceptional edge-to-edge optical clarity, impact resistance, and 100% UV400 radiation protection.';
+      }
+    }
+  </script>
+  <!-- Tablet & Mobile Bottom App Menu Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Quick Action Menu Bar">
+    <div class="mobile-bottom-nav-inner">
+      <a href="index.html" class="bottom-nav-item">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+      </a>
+      <a href="products.html" class="bottom-nav-item">
+        <i class="bi bi-grid"></i>
+        <span>Catalog</span>
+      </a>
+      <a href="eye-test.html" class="bottom-nav-item bottom-nav-featured" title="Book Eye Exam">
+        <div class="bottom-nav-circle">
+          <i class="bi bi-calendar2-check-fill"></i>
+        </div>
+        <span>Book Exam</span>
+      </a>
+      <a href="cart.html" class="bottom-nav-item cart-toggle-btn">
+        <div class="bottom-nav-icon-wrap">
+          <i class="bi bi-bag"></i>
+          <span class="badge-count cart-badge-count">1</span>
+        </div>
+        <span>Cart</span>
+      </a>
+      <button class="bottom-nav-item mobile-toggle-btn" aria-label="More Menu">
+        <i class="bi bi-list"></i>
+        <span>Menu</span>
+      </button>
+    </div>
+  </nav>
+</body>
+</html>
